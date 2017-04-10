@@ -1,8 +1,9 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FollowTarget.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemySpawner.cs">
     <Files>
-      <File FileName="Assets/FollowTarget.cs" Line="1" Column="1" />
+      <File FileName="Assets/FollowTarget.cs" Line="7" Column="9" />
+      <File FileName="Assets/EnemySpawner.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
