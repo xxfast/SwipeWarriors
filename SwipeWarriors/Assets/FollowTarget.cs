@@ -10,7 +10,7 @@ public class FollowTarget : MonoBehaviour {
 
 	void Start () {
 	}
-	
+
 	void Update () {
 		if(target){
 			this.rotate (rotationSpeed);
