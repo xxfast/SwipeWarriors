@@ -7,6 +7,7 @@ public class StaminaBar : MonoBehaviour {
     private int maxStamina;
 
     private int standardRestore;
+    private int crashRestore;
 
     private bool crash;
 
@@ -14,10 +15,11 @@ public class StaminaBar : MonoBehaviour {
 	void Start () {
         crash = false;
 
-        maxStamina = 1000;
-        standardRestore = 2;
+        maxStamina = 500;
+        standardRestore = 5;
+        crashRestore = 1;
 
-        stamina = 1000;
+        stamina = 500;
 	}
 	
 	// Update is called once per frame
@@ -47,10 +49,17 @@ public class StaminaBar : MonoBehaviour {
     /// </summary>
     public void recover()
     {
-        if (stamina < maxStamina)
+        // Standard recovery
+        if (stamina < maxStamina && !crash)
         {
-            Debug.Log(stamina);
             stamina += standardRestore;
+            Debug.Log(stamina);
+        }
+        // Crash Debuff recovery
+        else if (stamina < maxStamina && crash)
+        {
+            stamina += crashRestore;
+            Debug.Log(stamina);
         }
 
         if (stamina == maxStamina)
