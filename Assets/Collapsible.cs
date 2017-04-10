@@ -15,7 +15,8 @@ public class Collapsible : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		// TODO : Implement collapsable behavior
-		if(collision.gameObject.tag.Contains("enemy")){
+		if(!collision.gameObject.tag.Contains("enemy")){
+            GameObject.Destroy(this.gameObject);
 //			Object prefab = Resources.Load("enemy", typeof(GameObject));
 //			GameObject enemy = Instantiate(prefab, this.transform.position, new Quaternion(0,0,0,0)) as GameObject;
 //			Vector3 newScale = Vector3.Scale (this.transform.localScale, collision.gameObject.transform.localScale);
