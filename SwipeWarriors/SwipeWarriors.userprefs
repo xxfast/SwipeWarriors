@@ -1,9 +1,10 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemySpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/EnemySpawner.cs">
     <Files>
-      <File FileName="Assets/FollowTarget.cs" Line="7" Column="9" />
-      <File FileName="Assets/EnemySpawner.cs" Line="1" Column="1" />
+      <File FileName="../../../../Desktop/save-the-kingdom/app.js" Line="84" Column="31" />
+      <File FileName="Assets/scripts/EnemySpawner.cs" Line="18" Column="11" />
+      <File FileName="Assets/Scripts/FollowTarget.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
