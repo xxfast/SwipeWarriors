@@ -12,6 +12,8 @@ public class PathMovement : MonoBehaviour {
     private GameObject instantiatedPath;
     public float speed = 1.0f;
 
+    private StaminaBar staminaBar;
+
     private int nextPointIndex = -1;
     private bool pathComplete = false;
     // Use this for initialization
@@ -19,6 +21,8 @@ public class PathMovement : MonoBehaviour {
 		if(thingToMove == null) {
             thingToMove = this.gameObject;
         }
+
+		staminaBar = this.gameObject.AddComponent<StaminaBar>() as StaminaBar;
 	}
 
     // Update is called once per frame
@@ -59,7 +63,7 @@ public class PathMovement : MonoBehaviour {
             }
         }
         if (instantiatedPath != null) {
-            instantiatedPath.GetComponent<LineRenderer>().numPositions = path.Count;
+            instantiatedPath.GetComponent<LineRenderer>().positionCount = path.Count;
             instantiatedPath.GetComponent<LineRenderer>().SetPositions(path.ToArray());
         }
     }
@@ -76,28 +80,39 @@ public class PathMovement : MonoBehaviour {
     // 1. there is a cap to path length
     // 2. the movement is uniform speed no matter the path length
     public void moveToNextPointOnPath() {
-        if(nextPointIndex < 0) {
+        // check for point to move to;
+        if(nextPointIndex < 0)
             return;
-        }
-        Vector3 nextPoint;
-        try {
-            nextPoint = path[nextPointIndex];
 
-        } catch(System.ArgumentOutOfRangeException e){
+        // get next point
+        Vector3 nextPoint;
+        try 
+        {
+            nextPoint = path[nextPointIndex];
+        }
+        catch(System.ArgumentOutOfRangeException e)
+        {
             return;
         }
-        
-        var maxDistanceDelta = Time.deltaTime*speed;
-       // thingToMove.transform.LookAt(nextPoint);
-        thingToMove.transform.position = Vector3.MoveTowards(thingToMove.transform.position, nextPoint, maxDistanceDelta);
-       // Debug.Log(Vector3.Distance(thingToMove.transform.position, nextPoint) + " " + maxDistanceDelta);
-        if(Vector3.Distance(thingToMove.transform.position, nextPoint) < maxDistanceDelta) {
-            if (nextPointIndex > 0) {
-                path.RemoveAt(nextPointIndex - 1);
-                nextPointIndex--;
+
+        // move
+        if(staminaBar.move())
+        {
+            var maxDistanceDelta = Time.deltaTime*speed;
+
+            // thingToMove.transform.LookAt(nextPoint);
+            thingToMove.transform.position = Vector3.MoveTowards(thingToMove.transform.position, nextPoint, maxDistanceDelta);
+
+            //Debug.Log(Vector3.Distance(thingToMove.transform.position, nextPoint) + " " + maxDistanceDelta);
+            if(Vector3.Distance(thingToMove.transform.position, nextPoint) < maxDistanceDelta) {
+                if (nextPointIndex > 0) {
+                    path.RemoveAt(nextPointIndex - 1);
+                    nextPointIndex--;
+                }
+                nextPointIndex++;
             }
-            nextPointIndex++;
         }
+        //TODO: Do somehting if no stamina left
     }
 
     public void resetPath() {
