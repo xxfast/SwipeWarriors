@@ -130,6 +130,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50652581515101702, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50652581515101702, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016c64619c20f409bb133f6ca70d8a97, type: 2}
   m_IsPrefabParent: 0
