@@ -12,6 +12,8 @@ public class PathMovement : MonoBehaviour {
     private GameObject instantiatedPath;
     public float speed = 1.0f;
 
+    public GameObject attackArea;
+
     private int nextPointIndex = -1;
     private bool pathComplete = false;
     // Use this for initialization
@@ -76,7 +78,9 @@ public class PathMovement : MonoBehaviour {
     // 1. there is a cap to path length
     // 2. the movement is uniform speed no matter the path length
     public void moveToNextPointOnPath() {
+        //if the player doesn't move, then the attack area disappears
         if(nextPointIndex < 0) {
+            attackArea.SetActive(false);
             return;
         }
         Vector3 nextPoint;
@@ -84,8 +88,12 @@ public class PathMovement : MonoBehaviour {
             nextPoint = path[nextPointIndex];
 
         } catch(System.ArgumentOutOfRangeException e){
+            attackArea.SetActive(false);
             return;
         }
+
+        //if the player does move, then the attack area reappears
+        attackArea.SetActive(true);
         
         var maxDistanceDelta = Time.deltaTime*speed;
        // thingToMove.transform.LookAt(nextPoint);
