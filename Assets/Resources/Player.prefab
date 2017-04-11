@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212319556164956236}
   - component: {fileID: 114664901946421642}
   - component: {fileID: 58842185514952520}
+  - component: {fileID: 114427394925911836}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -53,9 +54,25 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.285
+--- !u!114 &114427394925911836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354789025844552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119b32c8b5dfbc24ca055232b2d18092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stamina: 150
+  maxStamina: 150
+  standardRestore: 5
+  crashRestore: 1
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,6 +88,7 @@ MonoBehaviour:
   minPathPointDistance: 0.1
   pathPrefab: {fileID: 1041409077557290, guid: d9d5a9ce672b0494e995d999e7efae2e, type: 2}
   speed: 3
+  staminaBar: {fileID: 114427394925911836}
 --- !u!212 &212319556164956236
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -101,8 +119,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ceafe22d7175aa94caad6a2fc291724e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
