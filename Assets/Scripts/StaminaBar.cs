@@ -1,17 +1,19 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StaminaBar : MonoBehaviour {
-    public int stanima;
-    //TODO: public int maxStamina;
+    public int stamina;
+    public int maxStamina;
+
+    public int standardRestore;
+    public int crashRestore;
 
     private bool crash;
 
 	// Use this for initialization
 	void Start () {
         crash = false;
-        stanima = 1000;
 	}
 	
 	// Update is called once per frame
@@ -23,10 +25,10 @@ public class StaminaBar : MonoBehaviour {
     // Returns state of stamina bar (crash or not);
     public bool move()
     {
-        Debug.Log(stanima);
-        if(stanima > 0)
+        Debug.Log(stamina);
+        if(stamina > 0)
         {
-            stanima--;
+            stamina--;
             return true;
         }
         else
@@ -34,5 +36,27 @@ public class StaminaBar : MonoBehaviour {
             crash = true;
             return false;
         }
+    }
+
+    /// <summary>
+    /// Recovers stamina by n;
+    /// </summary>
+    public void recover()
+    {
+        // Standard recovery
+        if (stamina < maxStamina && !crash)
+        {
+            stamina += standardRestore;
+            Debug.Log(stamina);
+        }
+        // Crash Debuff recovery
+        else if (stamina < maxStamina && crash)
+        {
+            stamina += crashRestore;
+            Debug.Log(stamina);
+        }
+
+        if (stamina == maxStamina)
+            crash = false;
     }
 }

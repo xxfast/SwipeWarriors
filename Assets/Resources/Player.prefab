@@ -69,7 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119b32c8b5dfbc24ca055232b2d18092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stanima: 500
+  stamina: 150
+  maxStamina: 150
+  standardRestore: 5
+  crashRestore: 1
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1

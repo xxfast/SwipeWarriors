@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -21,8 +21,6 @@ public class PathMovement : MonoBehaviour {
 		if(thingToMove == null) {
             thingToMove = this.gameObject;
         }
-
-		//staminaBar = this.gameObject.AddComponent<StaminaBar>() as StaminaBar;
 	}
 
     // Update is called once per frame
@@ -82,7 +80,10 @@ public class PathMovement : MonoBehaviour {
     public void moveToNextPointOnPath() {
         // check for point to move to;
         if(nextPointIndex < 0)
+        {
+            staminaBar.recover();
             return;
+        }
 
         // get next point
         Vector3 nextPoint;
@@ -92,6 +93,7 @@ public class PathMovement : MonoBehaviour {
         }
         catch(System.ArgumentOutOfRangeException e)
         {
+            staminaBar.recover();
             return;
         }
 
@@ -113,6 +115,11 @@ public class PathMovement : MonoBehaviour {
             }
         }
         //TODO: Do somehting if no stamina left
+        else
+        {
+            // remove remainder of path
+            resetPath();
+        }
     }
 
     public void resetPath() {
