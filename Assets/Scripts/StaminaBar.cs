@@ -9,6 +9,8 @@ public class StaminaBar : MonoBehaviour {
     public int standardRestore;
     public int crashRestore;
 
+    public int attackDrain;
+
     private bool crash;
 
 	// Use this for initialization
@@ -38,9 +40,7 @@ public class StaminaBar : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Recovers stamina by n;
-    /// </summary>
+    // Recovers stamina by n;
     public void recover()
     {
         // Standard recovery
@@ -58,5 +58,14 @@ public class StaminaBar : MonoBehaviour {
 
         if (stamina == maxStamina)
             crash = false;
+    }
+
+    // Drains stamina by n when called.
+    public void attack()
+    {
+        Debug.Log("Attacked: " + stamina);
+
+        if (stamina > 0)
+            stamina -= attackDrain;
     }
 }
