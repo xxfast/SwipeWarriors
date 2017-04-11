@@ -69,8 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119b32c8b5dfbc24ca055232b2d18092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStamina: 1000
-  standardRestore: 2
+  stamina: 150
+  maxStamina: 150
+  standardRestore: 5
+  crashRestore: 1
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,6 +88,7 @@ MonoBehaviour:
   minPathPointDistance: 0.1
   pathPrefab: {fileID: 1041409077557290, guid: d9d5a9ce672b0494e995d999e7efae2e, type: 2}
   speed: 3
+  staminaBar: {fileID: 114427394925911836}
 --- !u!212 &212319556164956236
 SpriteRenderer:
   m_ObjectHideFlags: 1
