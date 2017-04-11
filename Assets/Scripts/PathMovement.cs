@@ -13,6 +13,7 @@ public class PathMovement : MonoBehaviour {
     public float speed = 1.0f;
 
     public StaminaBar staminaBar;
+    public GameObject attackArea;
 
     private int nextPointIndex = -1;
     private bool pathComplete = false;
@@ -81,6 +82,7 @@ public class PathMovement : MonoBehaviour {
         // check for point to move to;
         if(nextPointIndex < 0)
         {
+            attackArea.SetActive(false);
             staminaBar.recover();
             return;
         }
@@ -93,9 +95,13 @@ public class PathMovement : MonoBehaviour {
         }
         catch(System.ArgumentOutOfRangeException e)
         {
+            attackArea.SetActive(false);
             staminaBar.recover();
             return;
         }
+      
+      //if the player does move, then the attack area reappears
+        attackArea.SetActive(true);
 
         // move
         if(staminaBar.move())

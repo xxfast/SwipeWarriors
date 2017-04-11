@@ -6,6 +6,9 @@
 /Assets/AssetStoreTools*
 /testBuild_Data/
 
+# test build directories 
+/testBuild_Data/
+
 # Visual Studio 2015 cache directory
 /.vs/
 
