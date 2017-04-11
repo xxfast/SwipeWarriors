@@ -9,6 +9,17 @@ public class FollowTarget : MonoBehaviour {
 	[Range(1f,10f)] public float rotationSpeed;
 
 	void Start () {
+		ForceTowardTarget ();
+	}
+
+	void Update () {
+		if(target && target.transform.hasChanged){
+			ResetForces ();
+			ForceTowardTarget ();
+		}
+	}
+
+	void ForceTowardTarget(){
 		if(target){
 			var d = Vector2.Distance (this.transform.position,target.transform.position);
 			if (d > target.transform.localScale.x/2){
@@ -16,13 +27,13 @@ public class FollowTarget : MonoBehaviour {
 				var dy = (target.transform.position.y - this.transform.position.y) / d;
 				this.gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2(dx * followSpeed, dy * followSpeed));
 			}
-			this.gameObject.transform.Rotate (new Vector3 (0, 0, 0),rotationSpeed);
 			this.gameObject.GetComponent<Rigidbody2D> ().AddTorque (rotationSpeed);
 		}
 	}
 
-	void Update () {
-		
+	void ResetForces(){
+		this.gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+		this.gameObject.GetComponent<Rigidbody2D> ().angularVelocity = 0;
 	}
 
 }
