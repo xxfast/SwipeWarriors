@@ -12,7 +12,7 @@ public class PathMovement : MonoBehaviour {
     private GameObject instantiatedPath;
     public float speed = 1.0f;
 
-    private StaminaBar staminaBar;
+    public StaminaBar staminaBar;
 
     private int nextPointIndex = -1;
     private bool pathComplete = false;
@@ -21,8 +21,6 @@ public class PathMovement : MonoBehaviour {
 		if(thingToMove == null) {
             thingToMove = this.gameObject;
         }
-
-		staminaBar = this.gameObject.AddComponent<StaminaBar>() as StaminaBar;
 	}
 
     // Update is called once per frame

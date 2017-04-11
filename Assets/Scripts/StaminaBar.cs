@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StaminaBar : MonoBehaviour {
-    private int stamina;
-    private int maxStamina;
+    public int stamina;
+    public int maxStamina;
 
-    private int standardRestore;
-    private int crashRestore;
+    public int standardRestore;
+    public int crashRestore;
 
     private bool crash;
 
 	// Use this for initialization
 	void Start () {
         crash = false;
-
-        maxStamina = 500;
-        standardRestore = 5;
-        crashRestore = 1;
-
-        stamina = 500;
 	}
 	
 	// Update is called once per frame
