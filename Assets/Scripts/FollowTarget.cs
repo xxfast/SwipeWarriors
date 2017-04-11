@@ -9,17 +9,17 @@ public class FollowTarget : MonoBehaviour {
 	[Range(1f,10f)] public float rotationSpeed;
 
 	void Start () {
-		ForceTowardTarget ();
+		ApplyForceTowardTarget ();
 	}
 
 	void Update () {
 		if(target && target.transform.hasChanged){
 			ResetForces ();
-			ForceTowardTarget ();
+			ApplyForceTowardTarget ();
 		}
 	}
 
-	void ForceTowardTarget(){
+	void ApplyForceTowardTarget(){
 		if(target){
 			var d = Vector2.Distance (this.transform.position,target.transform.position);
 			if (d > target.transform.localScale.x/2){
