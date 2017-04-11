@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,6 +12,7 @@ public class PathMovement : MonoBehaviour {
     private GameObject instantiatedPath;
     public float speed = 1.0f;
 
+    public StaminaBar staminaBar;
     public GameObject attackArea;
 
     private int nextPointIndex = -1;
@@ -78,33 +79,52 @@ public class PathMovement : MonoBehaviour {
     // 1. there is a cap to path length
     // 2. the movement is uniform speed no matter the path length
     public void moveToNextPointOnPath() {
-        //if the player doesn't move, then the attack area disappears
-        if(nextPointIndex < 0) {
+        // check for point to move to;
+        if(nextPointIndex < 0)
+        {
             attackArea.SetActive(false);
+            staminaBar.recover();
             return;
         }
+
+        // get next point
         Vector3 nextPoint;
-        try {
+        try 
+        {
             nextPoint = path[nextPointIndex];
-
-        } catch(System.ArgumentOutOfRangeException e){
+        }
+        catch(System.ArgumentOutOfRangeException e)
+        {
             attackArea.SetActive(false);
+            staminaBar.recover();
             return;
         }
-
-        //if the player does move, then the attack area reappears
+      
+      //if the player does move, then the attack area reappears
         attackArea.SetActive(true);
-        
-        var maxDistanceDelta = Time.deltaTime*speed;
-       // thingToMove.transform.LookAt(nextPoint);
-        thingToMove.transform.position = Vector3.MoveTowards(thingToMove.transform.position, nextPoint, maxDistanceDelta);
-       // Debug.Log(Vector3.Distance(thingToMove.transform.position, nextPoint) + " " + maxDistanceDelta);
-        if(Vector3.Distance(thingToMove.transform.position, nextPoint) < maxDistanceDelta) {
-            if (nextPointIndex > 0) {
-                path.RemoveAt(nextPointIndex - 1);
-                nextPointIndex--;
+
+        // move
+        if(staminaBar.move())
+        {
+            var maxDistanceDelta = Time.deltaTime*speed;
+
+            // thingToMove.transform.LookAt(nextPoint);
+            thingToMove.transform.position = Vector3.MoveTowards(thingToMove.transform.position, nextPoint, maxDistanceDelta);
+
+            //Debug.Log(Vector3.Distance(thingToMove.transform.position, nextPoint) + " " + maxDistanceDelta);
+            if(Vector3.Distance(thingToMove.transform.position, nextPoint) < maxDistanceDelta) {
+                if (nextPointIndex > 0) {
+                    path.RemoveAt(nextPointIndex - 1);
+                    nextPointIndex--;
+                }
+                nextPointIndex++;
             }
-            nextPointIndex++;
+        }
+        //TODO: Do somehting if no stamina left
+        else
+        {
+            // remove remainder of path
+            resetPath();
         }
     }
 
