@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1354789025844552, guid: 97012572acb26d7439aaaadafcf37d13, type: 2}
-  followSpeed: 20
-  rotationSpeed: 2
+  followSpeed: 30
+  rotationSpeed: 3
 --- !u!212 &212895785971795034
 SpriteRenderer:
   m_ObjectHideFlags: 1
