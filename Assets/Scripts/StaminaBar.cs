@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StaminaBar : MonoBehaviour {
-    private int stanima;
+    public int stanima;
     //TODO: public int maxStamina;
 
     private bool crash;
