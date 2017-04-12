@@ -82,10 +82,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119b32c8b5dfbc24ca055232b2d18092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stamina: 150
-  maxStamina: 150
+  stamina: 250
+  maxStamina: 250
   standardRestore: 5
   crashRestore: 1
+  attackDrain: 15
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1
