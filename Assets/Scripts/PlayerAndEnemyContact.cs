@@ -18,6 +18,7 @@ public class PlayerAndEnemyContact : MonoBehaviour {
         if (theCollider.gameObject.CompareTag("enemy"))
         {
             LossText.text = "YOU LOSE!";
+            Time.timeScale = 0;
         }
     }
 }
