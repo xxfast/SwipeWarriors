@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114846078258886858}
   - component: {fileID: 50747411368309174}
   m_Layer: 8
-  m_Name: aggressive
+  m_Name: tank
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.73}
+    oldSize: {x: 2.6, y: 2.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -89,27 +89,33 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.71, y: -0.315}
-      - {x: 0.41, y: 0.205}
-      - {x: 0.38, y: 0.255}
-      - {x: 0.22999999, y: 0.515}
-      - {x: 0.07, y: 0.79499996}
-      - {x: 0.02, y: 0.865}
-      - {x: -0.03, y: 0.865}
-      - {x: -0.19, y: 0.59499997}
-      - {x: -0.29999998, y: 0.405}
-      - {x: -0.38, y: 0.265}
-      - {x: -0.69, y: -0.275}
-      - {x: -0.79999995, y: -0.465}
-      - {x: -0.88, y: -0.60499996}
-      - {x: -0.95, y: -0.72499996}
-      - {x: -1, y: -0.815}
-      - {x: -1, y: -0.865}
-      - {x: 1, y: -0.865}
-      - {x: 1, y: -0.84499997}
-      - {x: 0.97999996, y: -0.78499997}
-      - {x: 0.9, y: -0.645}
-      - {x: 0.87, y: -0.59499997}
+    - - {x: 1.16, y: -0.835}
+      - {x: 0.96999997, y: -0.505}
+      - {x: 0.9, y: -0.375}
+      - {x: 0.71, y: -0.044999998}
+      - {x: 0.62, y: 0.114999995}
+      - {x: 0.53999996, y: 0.255}
+      - {x: 0.39, y: 0.515}
+      - {x: 0.32999998, y: 0.625}
+      - {x: 0.06, y: 1.0849999}
+      - {x: 0.03, y: 1.125}
+      - {x: -0.04, y: 1.125}
+      - {x: -0.14, y: 0.955}
+      - {x: -0.32999998, y: 0.625}
+      - {x: -0.51, y: 0.305}
+      - {x: -0.65, y: 0.065}
+      - {x: -0.87, y: -0.325}
+      - {x: -0.96999997, y: -0.505}
+      - {x: -1.0799999, y: -0.695}
+      - {x: -1.16, y: -0.835}
+      - {x: -1.23, y: -0.955}
+      - {x: -1.28, y: -1.045}
+      - {x: -1.28, y: -1.0849999}
+      - {x: -1.26, y: -1.105}
+      - {x: 1.26, y: -1.105}
+      - {x: 1.28, y: -1.095}
+      - {x: 1.28, y: -1.055}
+      - {x: 1.27, y: -1.005}
 --- !u!114 &114291713475178578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ea72de8bec6445d974898799236965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 20
 --- !u!114 &114846078258886858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,7 +185,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ab987569f5dc94af5b08eba40b7d0d6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf099a540547a4d9788aba410f6c569c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

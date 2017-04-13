@@ -81,7 +81,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.73}
+    oldSize: {x: 0.9, y: 0.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -89,27 +89,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.71, y: -0.315}
-      - {x: 0.41, y: 0.205}
-      - {x: 0.38, y: 0.255}
-      - {x: 0.22999999, y: 0.515}
-      - {x: 0.07, y: 0.79499996}
-      - {x: 0.02, y: 0.865}
-      - {x: -0.03, y: 0.865}
-      - {x: -0.19, y: 0.59499997}
-      - {x: -0.29999998, y: 0.405}
-      - {x: -0.38, y: 0.265}
-      - {x: -0.69, y: -0.275}
-      - {x: -0.79999995, y: -0.465}
-      - {x: -0.88, y: -0.60499996}
-      - {x: -0.95, y: -0.72499996}
-      - {x: -1, y: -0.815}
-      - {x: -1, y: -0.865}
-      - {x: 1, y: -0.865}
-      - {x: 1, y: -0.84499997}
-      - {x: 0.97999996, y: -0.78499997}
-      - {x: 0.9, y: -0.645}
-      - {x: 0.87, y: -0.59499997}
+    - - {x: -0.03, y: 0.45}
+      - {x: -0.45, y: -0.13}
+      - {x: -0.45, y: -0.45}
+      - {x: 0.45, y: -0.45}
+      - {x: 0.45, y: -0.39999998}
+      - {x: 0.12, y: 0.45}
 --- !u!114 &114291713475178578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ea72de8bec6445d974898799236965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 5
 --- !u!114 &114846078258886858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1354789025844552, guid: 97012572acb26d7439aaaadafcf37d13, type: 2}
-  followSpeed: 30
+  followSpeed: 60
   rotationSpeed: 3
 --- !u!212 &212895785971795034
 SpriteRenderer:
@@ -179,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ab987569f5dc94af5b08eba40b7d0d6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16c31db7d2c044c6d8d82cd483c9ddc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
