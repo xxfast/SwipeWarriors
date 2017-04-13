@@ -10,8 +10,11 @@ public class StaminaBar : MonoBehaviour {
     public int crashRestore;
 
     public int attackDrain;
+    public int moveDrain;
 
     private bool crash;
+
+    public bool debug;
 
 	// Use this for initialization
 	void Start () {
@@ -27,17 +30,10 @@ public class StaminaBar : MonoBehaviour {
     // Returns state of stamina bar (crash or not);
     public bool move()
     {
-        Debug.Log(stamina);
-        if(stamina > 0)
-        {
-            stamina--;
-            return true;
-        }
-        else
-        {
-            crash = true;
-            return false;
-        }
+        if (debug)
+            Debug.Log("Standard Restore: ");
+        delta(-moveDrain);
+        return crash;
     }
 
     // Recovers stamina by n;
@@ -46,26 +42,46 @@ public class StaminaBar : MonoBehaviour {
         // Standard recovery
         if (stamina < maxStamina && !crash)
         {
-            stamina += standardRestore;
-            Debug.Log(stamina);
+            if (debug)
+                Debug.Log("Standard Restore: ");
+            delta(standardRestore);
         }
         // Crash Debuff recovery
         else if (stamina < maxStamina && crash)
         {
-            stamina += crashRestore;
-            Debug.Log(stamina);
+            if (debug)
+                Debug.Log("Crashed Restore: ");
+            delta(crashRestore);
         }
-
-        if (stamina == maxStamina)
-            crash = false;
     }
 
     // Drains stamina by n when called.
     public void attack()
     {
-        Debug.Log("Attacked: " + stamina);
+        if(debug)
+            Debug.Log("Attacked: ");
+        delta(-attackDrain);
+    }
 
-        if (stamina > 0)
-            stamina -= attackDrain;
+    // Changes stamina by delta
+    public void delta(int delta)
+    {
+        // Alter stamina
+        stamina += delta;
+        if (debug)
+            Debug.Log(stamina);
+
+        // Check limits
+        if (stamina >= maxStamina)
+        {
+            stamina = maxStamina;
+            crash = false;
+        }
+        
+        if(stamina <= 0)
+        {
+            stamina = 0;
+            crash = true;
+        }
     }
 }
