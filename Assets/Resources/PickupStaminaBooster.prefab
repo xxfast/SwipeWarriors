@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212656476381389508}
   - component: {fileID: 58835296305146210}
   - component: {fileID: 114288487588011344}
-  m_Layer: 0
+  - component: {fileID: 50169523802343518}
+  m_Layer: 8
   m_Name: PickupStaminaBooster
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,11 +38,31 @@ Transform:
   m_GameObject: {fileID: 1132950390070956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50169523802343518
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132950390070956}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58835296305146210
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -63,13 +84,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132950390070956}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d53e1c46f9dd87e49a87d49bd86f1e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 114427394925911836, guid: 97012572acb26d7439aaaadafcf37d13,
     type: 2}
+  debug: 1
   recoveryAmount: 50
 --- !u!212 &212656476381389508
 SpriteRenderer:
@@ -100,8 +122,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2093440007
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3ac7a456a541d64cacd2455c26bef09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

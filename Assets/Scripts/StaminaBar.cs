@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Defines Stamina Bar
+/// </summary>
 public class StaminaBar : MonoBehaviour {
-    public int stamina;
+    // Working Variables
+    private int stamina;
+    private bool crash;
+
+    // Settings
     public int maxStamina;
 
     public int standardRestore;
@@ -12,18 +19,13 @@ public class StaminaBar : MonoBehaviour {
     public int attackDrain;
     public int moveDrain;
 
-    private bool crash;
-
     public bool debug;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        stamina = maxStamina;
         crash = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
     // Move is called each step of the players movement
@@ -33,7 +35,8 @@ public class StaminaBar : MonoBehaviour {
         if (debug)
             Debug.Log("Standard Restore: ");
         delta(-moveDrain);
-        return !crash; // Can move it not crashed
+
+        return stamina > 0;
     }
 
     // Recovers stamina by n;

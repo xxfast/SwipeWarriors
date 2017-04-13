@@ -6,6 +6,8 @@ public class PickupStaminaBoost : MonoBehaviour {
     //refernces
     public StaminaBar staminaBar;
 
+    public bool debug;
+
     //variables
     public int recoveryAmount;
 
@@ -22,6 +24,8 @@ public class PickupStaminaBoost : MonoBehaviour {
     // executes on collect. (called by player)
     public void onCollect()
     {
+        if (debug)
+            Debug.Log("Stamina Booster Collected");
         staminaBar.delta(recoveryAmount);
     }
 }

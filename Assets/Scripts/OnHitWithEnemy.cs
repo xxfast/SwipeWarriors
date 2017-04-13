@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class OnHitWithEnemy : MonoBehaviour {
 
-  public string with = "enemy";
   public int damageAmount = 2;
   public StaminaBar staminaBar;
-	void OnTriggerEnter2D(Collider2D theObject)
+	void OnTriggerEnter2D(Collider2D col)
     {
         //if an enemy hits the attack area it is destroyed
-		if (theObject.CompareTag(with))
+		if (col.gameObject.CompareTag("Enemy"))
         {
-          theObject.gameObject.GetComponent<Health> ().DealDamage (damageAmount);
+            col.gameObject.GetComponent<Health> ().DealDamage (damageAmount);
           staminaBar.attack();
         }
     }
