@@ -27,13 +27,13 @@ public class StaminaBar : MonoBehaviour {
 	}
 
     // Move is called each step of the players movement
-    // Returns state of stamina bar (crash or not);
+    // Returns if player can move;
     public bool move()
     {
         if (debug)
             Debug.Log("Standard Restore: ");
         delta(-moveDrain);
-        return crash;
+        return !crash; // Can move it not crashed
     }
 
     // Recovers stamina by n;
