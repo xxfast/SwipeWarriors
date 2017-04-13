@@ -22,6 +22,6 @@ public class PickupStaminaBoost : MonoBehaviour {
     // executes on collect. (called by player)
     public void onCollect()
     {
-        staminaBar.delta(recoveryAmount);
+        staminaBar.applyDelta(recoveryAmount);
     }
 }

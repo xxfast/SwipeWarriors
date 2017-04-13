@@ -20,11 +20,6 @@ public class StaminaBar : MonoBehaviour {
 	void Start () {
         crash = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     // Move is called each step of the players movement
     // Returns if player can move;
@@ -32,7 +27,7 @@ public class StaminaBar : MonoBehaviour {
     {
         if (debug)
             Debug.Log("Standard Restore: ");
-        delta(-moveDrain);
+        applyDelta(-moveDrain);
         return !crash; // Can move it not crashed
     }
 
@@ -44,14 +39,14 @@ public class StaminaBar : MonoBehaviour {
         {
             if (debug)
                 Debug.Log("Standard Restore: ");
-            delta(standardRestore);
+            applyDelta(standardRestore);
         }
         // Crash Debuff recovery
         else if (stamina < maxStamina && crash)
         {
             if (debug)
                 Debug.Log("Crashed Restore: ");
-            delta(crashRestore);
+            applyDelta(crashRestore);
         }
     }
 
@@ -60,11 +55,11 @@ public class StaminaBar : MonoBehaviour {
     {
         if(debug)
             Debug.Log("Attacked: ");
-        delta(-attackDrain);
+        applyDelta(-attackDrain);
     }
 
     // Changes stamina by delta
-    public void delta(int delta)
+    public void applyDelta(int delta)
     {
         // Alter stamina
         stamina += delta;
