@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
+	public int id;
 	public float spawnDistance = 10;
 	public float spanwFrequency = 3.0f; 
 	public float spawnFor = 10.0f;
 	public List<Object> whatToSpawn = new List<Object> ();
 	private float respawnTime;
 	private float waveTime;
+
+	public GameObject target;
 
 	public EnemySpawner(WaveProfile toAttach){
 		attachProfile (toAttach);
@@ -23,12 +26,13 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 		respawnTime -= Time.deltaTime;
 		waveTime -= Time.deltaTime;
-		if (respawnTime < 0) {
+		if (respawnTime < 0 && whatToSpawn!= null && whatToSpawn.Count > 0) {
 			Spawn ();
 			respawnTime = spanwFrequency;
 		}
-		if (waveTime <= 0)
+		if (waveTime <= 0) {
 			this.enabled = false;
+		}
 	}
 
 	void Spawn(){
@@ -41,7 +45,7 @@ public class EnemySpawner : MonoBehaviour {
 		Object prefab = whatToSpawn[index];
 		if (prefab) {
 			GameObject enemy = Instantiate (prefab, new Vector3 (x, y, 0), new Quaternion (0, 0, 0, 0)) as GameObject;
-			enemy.GetComponent<FollowTarget> ().target = this.gameObject;
+			enemy.GetComponent<FollowTarget> ().target = target;
 		}
 	}
 
@@ -55,6 +59,5 @@ public class EnemySpawner : MonoBehaviour {
 	public bool hasEnded(){
 		return !this.enabled;
 	}
-
 
 }

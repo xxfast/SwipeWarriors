@@ -7,35 +7,40 @@ public class HordeSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject hordesTargeting; 
-	public float timeBetweenWaves;
+	public float timeBetweenWaves = 5;
 	public WaveProfileList waveProfiles = new WaveProfileList();
-	public int currentWaveNumber = 0;
+	private int currentWaveNumber = 0;
 
-	private EnemySpawner currentWave;
-	private float time;
+	private List<EnemySpawner> waves = new List<EnemySpawner>();
+	public float time;
 
-	void Start () {
+	void Start(){
 		time = timeBetweenWaves;
-		if (waveProfiles.waves!=null && waveProfiles.waves.Count>0) { //waveProfiles.list.Count > 0
-			WaveProfile currentProfile = waveProfiles.waves[0];
-			waveProfiles.waves.RemoveAt (0);
-			if (currentWave != null)
-				Destroy (currentWave);
-			currentWave = gameObject.AddComponent(typeof(EnemySpawner)) as EnemySpawner;
-			currentWave.enabled = true;
-			currentWave.attachProfile (currentProfile);
+	}
+
+	void Update () {
+		if ((waves.Count == 0) || waves [currentWaveNumber-1].hasEnded ()) {
+			time -= Time.deltaTime;
+			if (time <= 0) {
+				time = timeBetweenWaves;
+				CommenseHorde ();
+			}
+		}
+	}
+
+	void CommenseHorde () {
+		if (waveProfiles.waves != null && waveProfiles.waves.Count > 0) { 
+			waves.Add (gameObject.AddComponent (typeof(EnemySpawner)) as EnemySpawner);
+			WaveProfile currentProfile = waveProfiles.waves [currentWaveNumber];
+			waves [currentWaveNumber].enabled = true;
+			waves [currentWaveNumber].attachProfile (currentProfile);
+			waves [currentWaveNumber].target = hordesTargeting;
+			waves [currentWaveNumber].id = currentWaveNumber;
+			currentWaveNumber++;
 		} else {
 			this.enabled = false;
 		}
 	}
-	
-	void Update () {
-		if((currentWave!=null) && currentWave.hasEnded()){
-			time -= Time.deltaTime;
-			if (time <= 0) {
-				Start ();
-			}
-		}
-	}
+
 }
 
