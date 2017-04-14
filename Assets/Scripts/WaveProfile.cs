@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct WaveProfile{
+[System.Serializable]
+public class WaveProfile : System.Object {
 	public List<Object> whatToSpawn;
 	public float spawnDistance;
 	public float spanwFrequency ; 

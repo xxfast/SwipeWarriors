@@ -11,6 +11,10 @@ public class EnemySpawner : MonoBehaviour {
 	private float respawnTime;
 	private float waveTime;
 
+	public EnemySpawner(WaveProfile toAttach){
+		attachProfile (toAttach);
+	}
+
 	void Start () {
 		respawnTime = spanwFrequency;
 		waveTime = spawnFor;
@@ -47,5 +51,10 @@ public class EnemySpawner : MonoBehaviour {
 		spawnFor = toAttach.spawnFor;
 		whatToSpawn = toAttach.whatToSpawn;
 	}
+
+	public bool hasEnded(){
+		return !this.enabled;
+	}
+
 
 }
