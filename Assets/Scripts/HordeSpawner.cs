@@ -28,6 +28,9 @@ public class HordeSpawner : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Commenses a horde of invaders.
+	/// </summary>
 	void CommenseHorde () {
 		if (waveProfiles.waves != null && waveProfiles.waves.Count > 0) { 
 			waves.Add (gameObject.AddComponent (typeof(EnemySpawner)) as EnemySpawner);

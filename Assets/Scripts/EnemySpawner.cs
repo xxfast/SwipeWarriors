@@ -35,6 +35,9 @@ public class EnemySpawner : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Spawn a single enemy instance.
+	/// </summary>
 	void Spawn(){
 		var angle = Random.Range(0f,1.0f) * Mathf.PI * 2;
 		var radius = spawnDistance;
@@ -49,6 +52,10 @@ public class EnemySpawner : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Attachs a profile to the current enemy spawner.
+	/// </summary>
+	/// <param name="toAttach">To attach.</param>
 	public void attachProfile(WaveProfile toAttach){
 		spawnDistance = toAttach.spawnDistance;
 		spanwFrequency = toAttach.spanwFrequency;
@@ -56,6 +63,10 @@ public class EnemySpawner : MonoBehaviour {
 		whatToSpawn = toAttach.whatToSpawn;
 	}
 
+	/// <summary>
+	/// Returns true if the spawning was ended.
+	/// </summary>
+	/// <returns><c>true</c>, if ended was, <c>false</c> otherwise.</returns>
 	public bool hasEnded(){
 		return !this.enabled;
 	}
