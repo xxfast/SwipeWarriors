@@ -14,7 +14,8 @@ public class StaminaBar : MonoBehaviour {
 
     private bool crash;
 
-    public bool debug;
+    public bool debugIndicators;
+    public bool debugValues;
 
 	// Use this for initialization
 	void Start () {
@@ -25,10 +26,10 @@ public class StaminaBar : MonoBehaviour {
     // Returns if player can move;
     public bool move()
     {
-        if (debug)
+        if (debugIndicators)
             Debug.Log("Standard Move: - " + moveDrain);
         applyDelta(-moveDrain);
-        return !crash; // Can move it not crashed
+        return stamina > 0; // Can move if stamina greater than 0;
     }
 
     // Recovers stamina by n;
@@ -37,14 +38,14 @@ public class StaminaBar : MonoBehaviour {
         // Standard recovery
         if (stamina < maxStamina && !crash)
         {
-            if (debug)
+            if (debugIndicators)
                 Debug.Log("Standard Restore: +" + standardRestore);
             applyDelta(standardRestore);
         }
         // Crash Debuff recovery
         else if (stamina < maxStamina && crash)
         {
-            if (debug)
+            if (debugIndicators)
                 Debug.Log("Crashed Restore: +" + crashRestore);
             applyDelta(crashRestore);
         }
@@ -53,7 +54,7 @@ public class StaminaBar : MonoBehaviour {
     // Drains stamina by n when called.
     public void attack()
     {
-        if(debug)
+        if(debugIndicators)
             Debug.Log("Attacked: -" + attackDrain);
         applyDelta(-attackDrain);
     }
@@ -63,13 +64,13 @@ public class StaminaBar : MonoBehaviour {
     {
         // Alter stamina
         stamina += delta;
-        if (debug)
+        if (debugValues)
             Debug.Log(stamina);
 
         // Check limits
         if (stamina >= maxStamina)
         {
-            if (debug)
+            if (debugIndicators)
                 Debug.Log("Stamina Filled");
             stamina = maxStamina;
             crash = false;
@@ -77,7 +78,7 @@ public class StaminaBar : MonoBehaviour {
         
         if(stamina <= 0)
         {
-            if (debug)
+            if (debugIndicators)
                 Debug.Log("Stamina Crashed");
             stamina = 0;
             crash = true;

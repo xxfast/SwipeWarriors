@@ -135,7 +135,8 @@ MonoBehaviour:
   crashRestore: 1
   attackDrain: 15
   moveDrain: 1
-  debug: 1
+  debugIndicators: 1
+  debugValues: 0
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1
