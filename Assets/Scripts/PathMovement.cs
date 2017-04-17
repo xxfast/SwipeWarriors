@@ -17,6 +17,8 @@ public class PathMovement : MonoBehaviour {
 
     private int nextPointIndex = -1;
     private bool pathComplete = false;
+
+	public GameObject InstantiatedPath { get { return instantiatedPath; } }
     // Use this for initialization
     void Start () {
 		if(thingToMove == null) {
