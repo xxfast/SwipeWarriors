@@ -83,6 +83,7 @@ public class PathMovement : MonoBehaviour {
         if(nextPointIndex < 0)
         {
             attackArea.SetActive(false);
+            staminaBar.moving = false;
             staminaBar.recover();
             return;
         }
@@ -97,15 +98,17 @@ public class PathMovement : MonoBehaviour {
         {
             attackArea.SetActive(false);
             staminaBar.recover();
+            staminaBar.moving = false;
             return;
         }
-
-        //if the player does move, then the attack area reappears
-        attackArea.SetActive(true);
 
         // move
         if(staminaBar.move())
         {
+            //if the player does move, then the attack area reappears
+            attackArea.SetActive(true);
+            staminaBar.moving = true;
+
             var maxDistanceDelta = Time.deltaTime*speed;
 
             // thingToMove.transform.LookAt(nextPoint);
