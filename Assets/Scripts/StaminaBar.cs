@@ -10,34 +10,26 @@ public class StaminaBar : MonoBehaviour {
     public int crashRestore;
 
     public int attackDrain;
+    public int moveDrain;
 
     private bool crash;
+
+    public bool debugIndicators;
+    public bool debugValues;
 
 	// Use this for initialization
 	void Start () {
         crash = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     // Move is called each step of the players movement
-    // Returns state of stamina bar (crash or not);
+    // Returns if player can move;
     public bool move()
     {
-        Debug.Log(stamina);
-        if(stamina > 0)
-        {
-            stamina--;
-            return true;
-        }
-        else
-        {
-            crash = true;
-            return false;
-        }
+        if (debugIndicators)
+            Debug.Log("Standard Move: - " + moveDrain);
+        applyDelta(-moveDrain);
+        return stamina > 0; // Can move if stamina greater than 0;
     }
 
     // Recovers stamina by n;
@@ -46,26 +38,50 @@ public class StaminaBar : MonoBehaviour {
         // Standard recovery
         if (stamina < maxStamina && !crash)
         {
-            stamina += standardRestore;
-            Debug.Log(stamina);
+            if (debugIndicators)
+                Debug.Log("Standard Restore: +" + standardRestore);
+            applyDelta(standardRestore);
         }
         // Crash Debuff recovery
         else if (stamina < maxStamina && crash)
         {
-            stamina += crashRestore;
-            Debug.Log(stamina);
+            if (debugIndicators)
+                Debug.Log("Crashed Restore: +" + crashRestore);
+            applyDelta(crashRestore);
         }
-
-        if (stamina == maxStamina)
-            crash = false;
     }
 
     // Drains stamina by n when called.
     public void attack()
     {
-        Debug.Log("Attacked: " + stamina);
+        if(debugIndicators)
+            Debug.Log("Attacked: -" + attackDrain);
+        applyDelta(-attackDrain);
+    }
 
-        if (stamina > 0)
-            stamina -= attackDrain;
+    // Changes stamina by delta
+    public void applyDelta(int delta)
+    {
+        // Alter stamina
+        stamina += delta;
+        if (debugValues)
+            Debug.Log(stamina);
+
+        // Check limits
+        if (stamina >= maxStamina)
+        {
+            if (debugIndicators)
+                Debug.Log("Stamina Filled");
+            stamina = maxStamina;
+            crash = false;
+        }
+        
+        if(stamina <= 0)
+        {
+            if (debugIndicators)
+                Debug.Log("Stamina Crashed");
+            stamina = 0;
+            crash = true;
+        }
     }
 }
