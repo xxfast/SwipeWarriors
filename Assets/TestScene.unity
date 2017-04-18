@@ -115,6 +115,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4826791226005532, guid: 016c64619c20f409bb133f6ca70d8a97, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -147,6 +152,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: 908c91f19f3914a6e994c6aaa2b5947e,
+        type: 2}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508,
+        type: 2}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: 16a042b8d983f40fe854b1aa6cc9c2bf,
+        type: 2}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: a3aa790ae117f4bbd8d0857287c9eb43,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016c64619c20f409bb133f6ca70d8a97, type: 2}
   m_IsPrefabParent: 0
@@ -351,6 +380,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212319556164956236, guid: 97012572acb26d7439aaaadafcf37d13,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114664901946421642, guid: 97012572acb26d7439aaaadafcf37d13,
         type: 2}
       propertyPath: staminaBar
@@ -499,6 +533,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4826791226005532, guid: 016c64619c20f409bb133f6ca70d8a97, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -546,6 +585,30 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: a3aa790ae117f4bbd8d0857287c9eb43,
+        type: 2}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: 16a042b8d983f40fe854b1aa6cc9c2bf,
+        type: 2}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: 908c91f19f3914a6e994c6aaa2b5947e,
+        type: 2}
+    - target: {fileID: 114237597680080356, guid: 016c64619c20f409bb133f6ca70d8a97,
+        type: 2}
+      propertyPath: whatToSpawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016c64619c20f409bb133f6ca70d8a97, type: 2}
   m_IsPrefabParent: 0
