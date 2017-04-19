@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  dropProbability: 0.5
+  drops: {fileID: 1132950390070956, guid: b951dd7d03f2d074582974f88db843c0, type: 2}
 --- !u!114 &114846078258886858
 MonoBehaviour:
   m_ObjectHideFlags: 1

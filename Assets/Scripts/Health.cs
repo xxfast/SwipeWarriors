@@ -8,6 +8,10 @@ public class Health : MonoBehaviour {
 	public int maxHealth = 10;
 	private int currentHealth;
 
+    public float dropProbability; // number between 0.0 and 1.0
+
+    public Object drops;
+
 	private Vector2 initalScale;
 
 	void Start () {
@@ -18,9 +22,9 @@ public class Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ResizeWithHealth ();
-		if (currentHealth <= 0)
-			Destroy (this.gameObject);
-	}
+        if (currentHealth <= 0)
+            Death();
+    }
 
 	void ResizeWithHealth(){
 		float ratio = (float)currentHealth / (float)maxHealth;
@@ -32,5 +36,15 @@ public class Health : MonoBehaviour {
 		currentHealth -= amount;
 	}
 
-
+    void Death()
+    {
+        bool drop = Random.value <= dropProbability;
+        
+        if(drop)
+        {
+            GameObject pickup = Instantiate(drops, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
+        }
+            
+        Destroy(this.gameObject);
+    }
 }
