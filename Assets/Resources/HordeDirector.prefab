@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4761314332087110}
   - component: {fileID: 114209276656794448}
-  - component: {fileID: 114473832709778924}
   m_Layer: 0
   m_Name: HordeDirector
   m_TagString: Untagged
@@ -77,21 +76,3 @@ MonoBehaviour:
       spanwFrequency: 1
       spawnFor: 1
   time: 5
---- !u!114 &114473832709778924
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069218242169100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23c8be6832ac430db521add3eb13cd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  spawnDistance: 10
-  spanwFrequency: 1
-  spawnFor: 10
-  whatToSpawn:
-  - {fileID: 1228160630225258, guid: 908c91f19f3914a6e994c6aaa2b5947e, type: 2}
-  target: {fileID: 0}

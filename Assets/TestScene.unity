@@ -115,21 +115,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[1].whatToSpawn.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[2].whatToSpawn.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[3].whatToSpawn.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4761314332087110, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -162,80 +147,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114473832709778924, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1809214754}
     - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
         type: 2}
       propertyPath: hordesTargeting
       value: 
       objectReference: {fileID: 1809214754}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[1].whatToSpawn.Array.data[0]
-      value: 
-      objectReference: {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508,
-        type: 2}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: time
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[1].spawnDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[1].spanwFrequency
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[1].spawnFor
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[2].whatToSpawn.Array.data[0]
-      value: 
-      objectReference: {fileID: 1228160630225258, guid: a3aa790ae117f4bbd8d0857287c9eb43,
-        type: 2}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[2].spawnDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[2].spanwFrequency
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[2].spawnFor
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[3].whatToSpawn.Array.data[0]
-      value: 
-      objectReference: {fileID: 1228160630225258, guid: 16a042b8d983f40fe854b1aa6cc9c2bf,
-        type: 2}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[3].spawnDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[3].spanwFrequency
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-        type: 2}
-      propertyPath: waveProfiles.waves.Array.data[3].spawnFor
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114473832709778924, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &78724923
@@ -750,26 +673,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2098627307 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1069218242169100, guid: 6f4bfec162a3c487cbeb7b52db262e38,
-    type: 2}
-  m_PrefabInternal: {fileID: 37472576}
---- !u!114 &2098627308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2098627307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23c8be6832ac430db521add3eb13cd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  spawnDistance: 10
-  spanwFrequency: 1
-  spawnFor: 10
-  whatToSpawn:
-  - {fileID: 1228160630225258, guid: 908c91f19f3914a6e994c6aaa2b5947e, type: 2}
-  target: {fileID: 1809214754}
