@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Wave profile describes how a particular wave of enemies needed to be spawned.
+/// </summary>
 [System.Serializable]
 public class WaveProfile : System.Object {
 	[Tooltip("List of prefabs to spawn in")]

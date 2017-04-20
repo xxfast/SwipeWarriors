@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Attachs a profile to the current enemy spawner.
+	/// Attachs a wave profile to the current enemy spawner.
 	/// </summary>
 	/// <param name="toAttach">To attach.</param>
 	public void attachProfile(WaveProfile toAttach){
