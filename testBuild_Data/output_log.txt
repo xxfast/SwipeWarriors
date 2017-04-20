@@ -15,7 +15,7 @@ Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data
 Loading B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.100 seconds
+- Completed reload, in  0.108 seconds
 Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 5760x1080 at -1920,0
