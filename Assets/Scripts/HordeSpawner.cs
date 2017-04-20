@@ -7,12 +7,16 @@ public class HordeSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject hordesTargeting; 
+
+	[Header("Horde Settings")]
 	public float timeBetweenWaves = 5;
+	[Header("Wave Descriptions")]
+	[Tooltip("Wave descriptions describing each of the waves")]
 	public WaveProfileList waveProfiles = new WaveProfileList();
 	private int currentWaveNumber = 0;
 
 	private List<EnemySpawner> waves = new List<EnemySpawner>();
-	public float time;
+	private float time;
 
 	void Start(){
 		time = timeBetweenWaves;

@@ -4,8 +4,12 @@ using UnityEngine;
 
 [System.Serializable]
 public class WaveProfile : System.Object {
+	[Tooltip("List of prefabs to spawn in")]
 	public List<Object> whatToSpawn;
+	[Tooltip("Distance where the enemies will be spawned from")]
 	public float spawnDistance;
-	public float spanwFrequency ; 
+	[Tooltip("Frequency of the enemy spawns in seconds")]
+	public float spanwFrequency; 
+	[Tooltip("Duration of the enemy spawns in seconds")]
 	public float spawnFor;
 }
