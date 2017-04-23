@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
-  - center
+  - Enemy
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -15,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - enemies
-  - center
-  - 
+  - Player
+  - Enemy
+  - Pickup
   - 
   - 
   - 
@@ -43,9 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: center
-    uniqueID: 1456757505
+  - name: Player
+    uniqueID: 1092658329
     locked: 0
-  - name: enemies
-    uniqueID: 4214407503
+  - name: Enemy
+    uniqueID: 1250057013
+    locked: 0
+  - name: Pickup
+    uniqueID: 1012744535
     locked: 0
