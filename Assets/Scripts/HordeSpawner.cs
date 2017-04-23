@@ -9,10 +9,21 @@ public class HordeSpawner : MonoBehaviour {
 	public GameObject hordesTargeting; 
 
 	[Header("Horde Settings")]
+	/// <summary>
+	/// Determines time between waves.
+	/// </summary>
 	public float timeBetweenWaves = 5;
+
 	[Header("Wave Descriptions")]
 	[Tooltip("Wave descriptions describing each of the waves")]
+	/// <summary>
+	/// Wave descriptions describing each of the waves
+	/// </summary>
 	public WaveProfileList waveProfiles = new WaveProfileList();
+
+	/// <summary>
+	/// The current wave number.
+	/// </summary>
 	private int currentWaveNumber = 0;
 
 	private List<EnemySpawner> waves = new List<EnemySpawner>();
