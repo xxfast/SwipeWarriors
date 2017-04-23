@@ -32,7 +32,8 @@ public class StaminaBar : MonoBehaviour {
         bool canMove = stamina >= minimumStamina; // Player can move if stamina is greater than the minimum stamina
         if (debugIndicators)
             Debug.Log("Standard Move: - " + moveDrain);
-        applyDelta(-moveDrain);
+        if (canMove || moving)
+            applyDelta(-moveDrain);
         return canMove || moving;
     }
 
