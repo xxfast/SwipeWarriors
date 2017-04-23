@@ -14,14 +14,18 @@ public class SpawnOnDeath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // Checks if Object is still alive
 		if(this.gameObject.GetComponent<Health>().isDead)
 		{
+            // Spawn Objects if applicable
 			bool drop = Random.value <= dropProbability;
 			if(drop)
 			{
 				GameObject pickup = Instantiate(drops, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
 			}
-		}
 
+            // Distroy Object
+            Destroy(this.gameObject);
+        }
 	}
 }

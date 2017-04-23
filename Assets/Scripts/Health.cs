@@ -9,12 +9,15 @@ public class Health : MonoBehaviour {
 	private int currentHealth;
 
 	private Vector2 initalScale;
+
+    private bool alive;
    
 
-	public bool isDead { get { return currentHealth <= 0; } }
+	public bool isDead { get { return alive; } }
 
 	void Start () {
 		currentHealth = maxHealth;
+        alive = true;
 		initalScale = this.gameObject.transform.localScale;
 	}
 	
@@ -22,7 +25,7 @@ public class Health : MonoBehaviour {
 	void Update () {
 		ResizeWithHealth ();
         if (currentHealth <= 0)
-            Death();
+            alive = false;
     }
 
 	void ResizeWithHealth(){
@@ -34,9 +37,4 @@ public class Health : MonoBehaviour {
 	public void DealDamage(int amount){
 		currentHealth -= amount;
 	}
-
-    void Death()
-    {
-        Destroy(this.gameObject);
-    }
 }
