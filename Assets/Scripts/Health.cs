@@ -8,11 +8,10 @@ public class Health : MonoBehaviour {
 	public int maxHealth = 10;
 	private int currentHealth;
 
-    public float dropProbability; // number between 0.0 and 1.0
-
-    public Object drops;
-
 	private Vector2 initalScale;
+   
+
+	public bool isDead { get { return currentHealth <= 0; } }
 
 	void Start () {
 		currentHealth = maxHealth;
@@ -38,13 +37,6 @@ public class Health : MonoBehaviour {
 
     void Death()
     {
-        bool drop = Random.value <= dropProbability;
-        
-        if(drop)
-        {
-            GameObject pickup = Instantiate(drops, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
-        }
-            
         Destroy(this.gameObject);
     }
 }
