@@ -91,18 +91,18 @@ public class PathMovement : MonoBehaviour {
 
         // get next point
         Vector3 nextPoint;
-        try 
+        try
         {
             nextPoint = path[nextPointIndex];
         }
-        catch(System.ArgumentOutOfRangeException e)
+        catch (System.ArgumentOutOfRangeException e)
         {
             attackArea.SetActive(false);
             staminaBar.recover();
             return;
         }
-      
-      //if the player does move, then the attack area reappears
+
+        //if the player does move, then the attack area reappears
         attackArea.SetActive(true);
 
         // move
