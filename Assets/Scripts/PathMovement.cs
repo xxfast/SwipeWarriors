@@ -11,12 +11,16 @@ public class PathMovement : MonoBehaviour {
     public GameObject pathPrefab;
     private GameObject instantiatedPath;
     public float speed = 1.0f;
+    public float attackDelay;
 
     public StaminaBar staminaBar;
     public GameObject attackArea;
 
     private int nextPointIndex = -1;
     private bool pathComplete = false;
+    private float time;
+
+
     // Use this for initialization
     void Start () {
 		if(thingToMove == null) {
@@ -82,6 +86,7 @@ public class PathMovement : MonoBehaviour {
         // check for point to move to;
         if(nextPointIndex < 0)
         {
+            time = attackDelay;
             attackArea.SetActive(false);
             staminaBar.recover();
             return;
@@ -95,17 +100,21 @@ public class PathMovement : MonoBehaviour {
         }
         catch (System.ArgumentOutOfRangeException e)
         {
+            time = attackDelay;
             attackArea.SetActive(false);
             staminaBar.recover();
             return;
         }
 
-        //if the player does move, then the attack area reappears
-        attackArea.SetActive(true);
-
         // move
         if(staminaBar.move())
         {
+            time -= Time.deltaTime;
+
+            // start attacking if attack delay has passed.
+            if (time <= 0.0)
+                attackArea.SetActive(true);
+
             var maxDistanceDelta = Time.deltaTime*speed;
 
             // thingToMove.transform.LookAt(nextPoint);
