@@ -16,7 +16,7 @@ public class Health : MonoBehaviour {
     private bool alive;
    
 
-	public bool isDead { get { return alive; } }
+	public bool isDead { get { return !alive; } }
 
 	void Start () {
 		currentHealth = maxHealth;
