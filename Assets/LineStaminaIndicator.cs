@@ -5,29 +5,33 @@ using UnityEngine;
 public class LineStaminaIndicator : MonoBehaviour {
 
 	private GameObject initiatedPath;
-	private StaminaBar currentStamina;
+	private StaminaBar currentStaminaBar;
 	public Color staminaColor = Color.green;
+	public Color pathColor = Color.red;
+	private float percentage;
 
-	// Use this for initialization
 	void Start () {
-		currentStamina = ((StaminaBar)this.gameObject.GetComponent<StaminaBar> ());
+		currentStaminaBar = ((StaminaBar)this.gameObject.GetComponent<StaminaBar> ());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		PathMovement pm = ((PathMovement)this.gameObject.GetComponent<PathMovement> ());
-		initiatedPath = pm.InstantiatedPath;
-		if (initiatedPath == null) return;
+
+	void SetUpGradient(){
 		LineRenderer lr = initiatedPath.GetComponent<LineRenderer>();
 		lr.material = new Material(Shader.Find("Sprites/Default"));
-
-		// A simple 2 color gradient with a fixed alpha of 1.0f.
 		float alpha = 1.0f;
 		Gradient gradient = new Gradient();
 		gradient.SetKeys(
-			new GradientColorKey[] { new GradientColorKey(staminaColor, 0.0f), new GradientColorKey(Color.red, 0.5f) },
-			new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
+			new GradientColorKey[] { new GradientColorKey(staminaColor, 0.0f),new GradientColorKey(staminaColor, percentage),new GradientColorKey(pathColor, percentage),new GradientColorKey(pathColor, 1.0f) },
+			new GradientAlphaKey[] { new GradientAlphaKey(alpha, 1.0f), new GradientAlphaKey(alpha, 1.0f) }
 		);
 		lr.colorGradient = gradient;
+	}
+	
+	void Update () {
+		percentage = (float) currentStaminaBar.stamina / (float)currentStaminaBar.maxStamina;
+		PathMovement pm = ((PathMovement)this.gameObject.GetComponent<PathMovement> ());
+		initiatedPath = pm.InstantiatedPath;
+		if (initiatedPath != null) {
+			SetUpGradient ();
+		}
 	}
 }

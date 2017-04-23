@@ -205,7 +205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c998bd753b2646e68a691cf32c96897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initiatedPath: {fileID: 0}
   staminaColor: {r: 0, g: 1, b: 0, a: 1}
+  pathColor: {r: 1, g: 0, b: 0, a: 1}
+  percentage: 0
+  pathLineCount: 0
 --- !u!1 &747739382
 GameObject:
   m_ObjectHideFlags: 0
