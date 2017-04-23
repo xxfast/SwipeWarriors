@@ -6,10 +6,13 @@ public class Health : MonoBehaviour {
 
 	// Use this for initialization
 	public int maxHealth = 10;
-	private int currentHealth;
+
+    [SerializeField]
+    private int currentHealth;
 
 	private Vector2 initalScale;
 
+    [SerializeField]
     private bool alive;
    
 
