@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 60621732274850728}
   - component: {fileID: 50041960642425180}
   - component: {fileID: 212782988942997306}
+  - component: {fileID: 114169414454838874}
+  - component: {fileID: 114081328533584094}
   m_Layer: 9
   m_Name: EnemyBasic
   m_TagString: Enemy
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1013797642776098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +58,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -91,6 +93,36 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &114081328533584094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013797642776098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3327d337369654488c594b342cd61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initalScale: {x: 0, y: 0}
+  health: {fileID: 0}
+  healthRatio: 0
+--- !u!114 &114169414454838874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013797642776098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f018425d7cb893f4d910712e5bfbf498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  MaxHealth: 10
+  alive: 0
+  DebugValues: 0
+  DebugIndication: 0
 --- !u!212 &212782988942997306
 SpriteRenderer:
   m_ObjectHideFlags: 1

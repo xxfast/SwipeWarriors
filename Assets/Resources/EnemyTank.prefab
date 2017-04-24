@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 60168306679547040}
   - component: {fileID: 50656410651821230}
   - component: {fileID: 212433603265749636}
+  - component: {fileID: 114870317241198726}
   m_Layer: 9
   m_Name: EnemyTank
   m_TagString: Enemy
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1971825851841878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -78,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.73}
+    oldSize: {x: 2.6, y: 2.25}
     newSize: {x: 2, y: 1.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -91,6 +92,22 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &114870317241198726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1971825851841878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f018425d7cb893f4d910712e5bfbf498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  MaxHealth: 20
+  alive: 0
+  DebugValues: 0
+  DebugIndication: 0
 --- !u!212 &212433603265749636
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,7 +140,7 @@ SpriteRenderer:
   m_SortingLayerID: 1250057013
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7285253e1509e08438cf559b7d6e044d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 863e5dbc52f2a7f49a112bc6258e2203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
