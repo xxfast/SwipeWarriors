@@ -30,6 +30,14 @@ public class Health : MonoBehaviour {
         }
     }
 
+    public bool IsDead
+    {
+        get
+        {
+            return !alive;
+        }
+    }
+
     /// <summary>
     /// Deals Damage
     /// </summary>
