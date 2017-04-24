@@ -240,16 +240,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114820069366093346, guid: 97012572acb26d7439aaaadafcf37d13,
-        type: 2}
-      propertyPath: DebugIndication
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114820069366093346, guid: 97012572acb26d7439aaaadafcf37d13,
-        type: 2}
-      propertyPath: DebugValues
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97012572acb26d7439aaaadafcf37d13, type: 2}
   m_IsPrefabParent: 0

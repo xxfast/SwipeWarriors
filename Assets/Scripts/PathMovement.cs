@@ -171,6 +171,7 @@ public class PathMovement : MonoBehaviour {
     {
         path = new List<Vector3>();
         Destroy(instantiatedPath);
+        stamina.StopMoving();
         nextPointIndex = -1;
     }
 }

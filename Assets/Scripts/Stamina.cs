@@ -46,10 +46,48 @@ public class Stamina : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Readonly Property to access current stamina.
+    /// </summary>
+    public int CurrentStamina
+    {
+        get
+        {
+            return stamina;
+        }
+    }
+
+    /// <summary>
+    /// Readonly Property to access state of moveing flag.
+    /// </summary>
+    public bool IsMoving
+    {
+        get
+        {
+            return moving;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         crashed = false;
 	}
+
+    /// <summary>
+    /// Sets Movement Flag to "Moving"
+    /// </summary>
+    public void StartMoving()
+    {
+        moving = true;
+    }
+
+    /// <summary>
+    /// Sets Movement Flag to "Not Moving"
+    /// </summary>
+    public void StopMoving()
+    {
+        moving = false;
+    }
 
     /// <summary>
     /// Step Movement.
@@ -61,9 +99,11 @@ public class Stamina : MonoBehaviour {
         
         if (canMove || moving)
         {
+            if (!moving)
+                moving = true;
             if (DebugIndication) Debug.Log("Standard Movement: -" + MoveDrain);
             ApplyDelta(-MoveDrain);
-            return true;
+            return moving;
         }
         return false;
     }
@@ -118,6 +158,7 @@ public class Stamina : MonoBehaviour {
             if (DebugIndication) Debug.Log("Stamina Empty.");
             stamina = 0;
             crashed = true;
+            moving = false;
         }
     }
 }
