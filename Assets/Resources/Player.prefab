@@ -131,12 +131,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 235
   maxStamina: 250
+  minimumStamina: 50
   standardRestore: 5
   crashRestore: 1
   attackDrain: 15
   moveDrain: 1
-  debugIndicators: 1
-  debugValues: 0
+  moving: 0
+  debugIndicators: 0
+  debugValues: 1
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1

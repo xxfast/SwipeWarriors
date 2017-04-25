@@ -5,6 +5,7 @@ using UnityEngine;
 public class StaminaBar : MonoBehaviour {
     public int stamina;
     public int maxStamina;
+    public int minimumStamina;
 
     public int standardRestore;
     public int crashRestore;
@@ -13,6 +14,7 @@ public class StaminaBar : MonoBehaviour {
     public int moveDrain;
 
     private bool crash;
+    public bool moving;
 
     public bool debugIndicators;
     public bool debugValues;
@@ -20,16 +22,19 @@ public class StaminaBar : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         crash = false;
+        moving = false;
 	}
 
     // Move is called each step of the players movement
     // Returns if player can move;
     public bool move()
     {
+        bool canMove = stamina >= minimumStamina; // Player can move if stamina is greater than the minimum stamina
         if (debugIndicators)
             Debug.Log("Standard Move: - " + moveDrain);
-        applyDelta(-moveDrain);
-        return stamina > 0; // Can move if stamina greater than 0;
+        if (canMove || moving)
+            applyDelta(-moveDrain);
+        return canMove || moving;
     }
 
     // Recovers stamina by n;
@@ -82,6 +87,7 @@ public class StaminaBar : MonoBehaviour {
                 Debug.Log("Stamina Crashed");
             stamina = 0;
             crash = true;
+            moving = false;
         }
     }
 }

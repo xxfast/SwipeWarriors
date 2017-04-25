@@ -89,6 +89,7 @@ public class PathMovement : MonoBehaviour {
         {
             time = attackDelay;
             attackArea.SetActive(false);
+            staminaBar.moving = false;
             staminaBar.recover();
             return;
         }
@@ -104,6 +105,7 @@ public class PathMovement : MonoBehaviour {
             time = attackDelay;
             attackArea.SetActive(false);
             staminaBar.recover();
+            staminaBar.moving = false;
             return;
         }
 
@@ -111,6 +113,7 @@ public class PathMovement : MonoBehaviour {
         if(staminaBar.move())
         {
             time -= Time.deltaTime;
+            staminaBar.moving = true;
 
             // start attacking if attack delay has passed.
             if (time <= 0.0)
