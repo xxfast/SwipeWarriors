@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4309117545624706}
   - component: {fileID: 114475315702525240}
+  - component: {fileID: 114339756357444344}
   m_Layer: 0
   m_Name: DirectorHordeSpawner
   m_TagString: Untagged
@@ -40,6 +41,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114339756357444344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927274865397544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4dd1fb7f6940148935f04be1c8019a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114475315702525240
 MonoBehaviour:
   m_ObjectHideFlags: 1

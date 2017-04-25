@@ -52,7 +52,7 @@ public class HordeSpawner : MonoBehaviour {
     /// </summary>
     private void CommenseHorde()
     {
-        if (WaveProfiles.Waves != null && WaveProfiles.Waves.Count > 0)
+        if (WaveProfiles.Waves != null && WaveProfiles.Waves.Count > 0 && currentWaveNumber < WaveProfiles.Waves.Count)
         {
             waves.Add(gameObject.AddComponent(typeof(EnemySpawner)) as EnemySpawner);
             WaveProfile current = WaveProfiles.Waves[currentWaveNumber];

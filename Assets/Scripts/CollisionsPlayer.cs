@@ -5,25 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CollisionsPlayer : MonoBehaviour {
-    // Object Refernces
-    [Header("Object Refernces:")]
-    [SerializeField]
-    private Text gameText;
-
-    // Settings
-    [Header("Settings:")]
-    public string WinText;
-    public string LossText;
-
     // Flags
     [Header("Flags:")]
     public bool DebugMessages;
-
-    // Use this for initialization
-    void Start () {
-        gameText = GameObject.Find("GameText").GetComponent<Text>();
-        gameText.text = "";
-	}
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -31,8 +15,7 @@ public class CollisionsPlayer : MonoBehaviour {
         if (col.gameObject.CompareTag("Enemy"))
         {
             if (DebugMessages) Debug.Log("Collision With Enemy");
-            gameText.text = LossText;
-            Time.timeScale = 0;
+            GameObject.Find("DirectorGame").SendMessage("SetLoss");
         }
 
         //Collect pickups on collisiion
