@@ -18,6 +18,7 @@ public class DesapwnController : MonoBehaviour {
         // Destroy Self on Death
 		if(health.IsDead)
         {
+            GameObject.Find("DirectorPickupSpawner").SendMessage("SpawnPickup", this.gameObject);
             Destroy(this.gameObject);
         }
 	}
