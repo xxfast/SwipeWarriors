@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4040387859164046}
   - component: {fileID: 212895785971795034}
   - component: {fileID: 114995690594933252}
+  - component: {fileID: 114478347809919382}
   - component: {fileID: 114291713475178578}
   - component: {fileID: 60202819756168348}
   - component: {fileID: 114846078258886858}
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &114478347809919382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec68e9cc6d19941038f552668687d5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropProbability: 1
+  drops: {fileID: 1132950390070956, guid: b951dd7d03f2d074582974f88db843c0, type: 2}
 --- !u!114 &114846078258886858
 MonoBehaviour:
   m_ObjectHideFlags: 1
