@@ -499,6 +499,11 @@ Prefab:
       propertyPath: targetOfTheReproduced
       value: 
       objectReference: {fileID: 1460538868}
+    - target: {fileID: 114514257340439894, guid: ae97eca61ad004ab49f765aec3bf8d8f,
+        type: 2}
+      propertyPath: frequency
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae97eca61ad004ab49f765aec3bf8d8f, type: 2}
   m_IsPrefabParent: 0
