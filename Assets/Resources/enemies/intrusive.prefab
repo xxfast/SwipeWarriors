@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 114303733886211430}
   - component: {fileID: 114242628627297972}
   - component: {fileID: 50095443091919200}
+  - component: {fileID: 114623210474010544}
   m_Layer: 0
   m_Name: intrusive
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,8 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  followSpeed: 0
-  rotationSpeed: 0
+  followSpeed: 40
+  rotationSpeed: 5
 --- !u!114 &114303733886211430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +143,18 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   alive: 0
+--- !u!114 &114623210474010544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741175997469908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cb5722d87e044259d8cc398303fa8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toIntrude: {fileID: 0}
 --- !u!212 &212811934364388616
 SpriteRenderer:
   m_ObjectHideFlags: 1
