@@ -5,7 +5,7 @@ using UnityEngine;
 public class ReproductiveBehavior : MonoBehaviour {
 
 	public List<GameObject> toReproduce; 
-	public int frequency;
+	public int frequency = 5;
 	public GameObject targetOfTheReproduced;
 
 	private float time;

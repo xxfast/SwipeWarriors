@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class IntrusiveBehavior : MonoBehaviour {
 
-	public GameObject toIntrude;
-
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
@@ -20,7 +17,10 @@ public class IntrusiveBehavior : MonoBehaviour {
 		if (theCollider.gameObject.CompareTag("obstacle"))
 		{
 			this.gameObject.transform.SetParent(theCollider.gameObject.transform);
+			this.enabled = false;
 			this.gameObject.GetComponent<FollowTarget>().enabled = false;
+			this.gameObject.GetComponent<ReproductiveBehavior>().enabled = true;
+			this.gameObject.GetComponent<PolygonCollider2D>().enabled = true;
 			Destroy (this.gameObject.GetComponent<Rigidbody2D> ());
 		}
 	}
