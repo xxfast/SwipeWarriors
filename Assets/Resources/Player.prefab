@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58842185514952520}
   - component: {fileID: 114427394925911836}
   - component: {fileID: 114371546094450676}
+  - component: {fileID: 114815119494031142}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -157,6 +158,18 @@ MonoBehaviour:
   attackDelay: 0.5
   staminaBar: {fileID: 114427394925911836}
   attackArea: {fileID: 1834709636764362}
+--- !u!114 &114815119494031142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354789025844552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0996630ce75607949982bc2369fc761c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDelay: 0.2
 --- !u!114 &114851597516990042
 MonoBehaviour:
   m_ObjectHideFlags: 1
