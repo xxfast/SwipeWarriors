@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Collapsible : MonoBehaviour {
 
+	public bool initiater = false;
+
 	void Start () {
 		
 	}
@@ -15,7 +17,12 @@ public class Collapsible : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.tag.Contains("enemy")){
-			collision.gameObject.transform.SetParent(this.gameObject.transform);
+			initiater = !collision.gameObject.GetComponent<Collapsible>().initiater;
+			if (initiater) {
+				collision.gameObject.GetComponent<Collapsible>().enabled = false;
+				collision.gameObject.transform.SetParent (this.gameObject.transform);
+				Destroy (collision.gameObject.GetComponent<Rigidbody2D> ());
+			}
 		}
 	}
 }
