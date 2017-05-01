@@ -20,13 +20,13 @@ public class PickupChangeSize : MonoBehaviour {
 
         if(Stakable)
         {
-            Vector3 scale = new Vector3(SetSize, SetSize);
-            gameObject.transform.localScale = scale;
+            Vector3 scale = new Vector3(DeltaSize, DeltaSize);
+            gameObject.transform.localScale += scale;
         }
         else
         {
-            Vector3 scale = new Vector3(DeltaSize, DeltaSize);
-            gameObject.transform.localScale += scale;
+            Vector3 scale = new Vector3(SetSize, SetSize);
+            gameObject.transform.localScale = scale;
         }
 
         gameObject.SendMessage("SetSizeRevertTimer", Duration);

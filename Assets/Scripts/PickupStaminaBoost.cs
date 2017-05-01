@@ -10,5 +10,6 @@ public class PickupStaminaBoost : MonoBehaviour {
     public void onCollect(GameObject gameObject)
     {
         gameObject.GetComponent<StaminaBar>().applyDelta(recoveryAmount);
+        Destroy(this.gameObject);
     }
 }

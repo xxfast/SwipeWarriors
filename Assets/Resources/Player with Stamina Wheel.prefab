@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 114362549911023396}
   - component: {fileID: 114798848330596254}
   - component: {fileID: 114758133247728452}
+  - component: {fileID: 114361083423272828}
   m_Layer: 0
   m_Name: Player with Stamina Wheel
   m_TagString: Player
@@ -189,6 +190,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114361083423272828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790710475914842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bba989ea1fefcc459fe9a66140929b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!114 &114362549911023396
 MonoBehaviour:
   m_ObjectHideFlags: 1
