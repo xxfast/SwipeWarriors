@@ -9,17 +9,23 @@ public class GravityBehavior : MonoBehaviour {
 
 	private Vector2 direction;
 
+	public bool shouldGravitate = true;
+
 	void Start () {
-		//this.GetComponent<Rigidbody2D> ().AddForce (Vector2.MoveTowards (this.transform.position,_gravitateToward.transform.position,gravity));
 	}
 	
 	void Update () {
 		if (_gravitateToward) {
 			Vector3 vectorToTarget = _gravitateToward.transform.position - transform.position;
+
+			if (shouldGravitate && !this.gameObject.GetComponent<PathMovement> ().IsMoving)
+				this.GetComponent<Rigidbody2D> ().AddForce (vectorToTarget);
+			else
+				this.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			
+			transform.rotation = Quaternion.FromToRotation (transform.position,_gravitateToward.transform.position);
 			float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-			Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-			transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * gravity);
-			this.GetComponent<Rigidbody2D> ().AddForce (vectorToTarget);
+			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 		}
 	}
 
