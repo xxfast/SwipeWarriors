@@ -8,6 +8,7 @@ TagManager:
   - center
   - obstacle
   - player
+  - pickup
   layers:
   - Default
   - TransparentFX

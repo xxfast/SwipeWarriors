@@ -21,10 +21,11 @@ GameObject:
   - component: {fileID: 4222470651713192}
   - component: {fileID: 212656476381389508}
   - component: {fileID: 58835296305146210}
+  - component: {fileID: 50017147198540244}
   - component: {fileID: 114288487588011344}
   m_Layer: 0
   m_Name: PickupStaminaBooster
-  m_TagString: Untagged
+  m_TagString: pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50017147198540244
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132950390070956}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58835296305146210
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -68,8 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53e1c46f9dd87e49a87d49bd86f1e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaBar: {fileID: 114427394925911836, guid: 97012572acb26d7439aaaadafcf37d13,
-    type: 2}
   recoveryAmount: 50
 --- !u!212 &212656476381389508
 SpriteRenderer:
