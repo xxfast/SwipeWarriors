@@ -157,6 +157,11 @@ Prefab:
       propertyPath: hordesTargeting
       value: 
       objectReference: {fileID: 1782186753}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114473832709778924, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
@@ -216,6 +221,11 @@ Prefab:
     - target: {fileID: 50293499720702970, guid: 8de47357acbb545469fbccb2e7bc34dc,
         type: 2}
       propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528090438030060, guid: 8de47357acbb545469fbccb2e7bc34dc,
+        type: 2}
+      propertyPath: amplitude
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -506,6 +516,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114528090438030060, guid: 8de47357acbb545469fbccb2e7bc34dc,
+        type: 2}
+      propertyPath: amplitude
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8de47357acbb545469fbccb2e7bc34dc, type: 2}
   m_IsPrefabParent: 0
@@ -742,6 +757,11 @@ Prefab:
     - target: {fileID: 4384694908584318, guid: 8de47357acbb545469fbccb2e7bc34dc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -75.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528090438030060, guid: 8de47357acbb545469fbccb2e7bc34dc,
+        type: 2}
+      propertyPath: amplitude
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8de47357acbb545469fbccb2e7bc34dc, type: 2}

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212955299662568318}
   - component: {fileID: 60605099641809840}
   - component: {fileID: 50293499720702970}
+  - component: {fileID: 114528090438030060}
   m_Layer: 0
   m_Name: floatingObstacle
   m_TagString: Untagged
@@ -103,6 +104,18 @@ PolygonCollider2D:
       - {x: 0.18062043, y: 0.4662363}
       - {x: 0.3201809, y: 0.3917269}
       - {x: 0.44758153, y: 0.2228694}
+--- !u!114 &114528090438030060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731487772958962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41aae95cd88ad4beeafa56121466e803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 10
 --- !u!212 &212955299662568318
 SpriteRenderer:
   m_ObjectHideFlags: 1
