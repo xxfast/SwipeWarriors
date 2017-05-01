@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 114798848330596254}
   m_Layer: 0
   m_Name: Player with Stamina Wheel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,10 +201,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 235
   maxStamina: 250
+  minimumStamina: 0
   standardRestore: 5
   crashRestore: 1
   attackDrain: 15
   moveDrain: 1
+  moving: 0
   debugIndicators: 1
   debugValues: 0
 --- !u!114 &114726937893598288
