@@ -7,6 +7,7 @@ TagManager:
   - enemy
   - center
   - obstacle
+  - player
   layers:
   - Default
   - TransparentFX
