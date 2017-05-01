@@ -67,7 +67,7 @@ public class PathMovement : MonoBehaviour {
             }
         }
         if (instantiatedPath != null) {
-            instantiatedPath.GetComponent<LineRenderer>().positionCount = path.Count;
+            //instantiatedPath.GetComponent<LineRenderer>().positionCount = path.Count;
             instantiatedPath.GetComponent<LineRenderer>().SetPositions(path.ToArray());
         }
     }
