@@ -157,6 +157,21 @@ Prefab:
       propertyPath: hordesTargeting
       value: 
       objectReference: {fileID: 1782186753}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: waveProfiles.waves.Array.data[1].spawnFor
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: waveProfiles.waves.Array.data[1].spanwFrequency
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114473832709778924, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
@@ -610,11 +625,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114925782812781630, guid: 73ce8e09edd23413280b5ce939fb137f,
-        type: 2}
-      propertyPath: LossText
-      value: 
-      objectReference: {fileID: 1277077416}
     - target: {fileID: 1239832321467692, guid: 73ce8e09edd23413280b5ce939fb137f, type: 2}
       propertyPath: m_Name
       value: Player

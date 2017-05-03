@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Collapsible : MonoBehaviour {
 
+	public bool initiater = false;
+	public GameObject groupController;
+
 	void Start () {
 		
 	}
@@ -14,15 +17,39 @@ public class Collapsible : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		// TODO : Implement collapsable behavior
 		if(collision.gameObject.tag.Contains("enemy")){
-//			Object prefab = Resources.Load("enemy", typeof(GameObject));
-//			GameObject enemy = Instantiate(prefab, this.transform.position, new Quaternion(0,0,0,0)) as GameObject;
-//			Vector3 newScale = Vector3.Scale (this.transform.localScale, collision.gameObject.transform.localScale);
-//			enemy.transform.localScale.Set (newScale.x*2,newScale.y*2,newScale.z*2);
-//			enemy.GetComponent<FollowTarget> ().target = this.gameObject;
-//			Destroy (collision.gameObject);
-//			Destroy (this.gameObject);
+			//nominate the initiater
+			if(collision.gameObject.GetComponent<Collapsible>() == null) return;
+			initiater = !collision.gameObject.GetComponent<Collapsible>().initiater;
+			if (initiater) {
+				//initiate the group controller
+				if(this.groupController==null && collision.gameObject.GetComponent<Collapsible>().groupController==null)
+					groupController = Instantiate (Resources.Load<GameObject>("GroupController"), collision.transform.position, new Quaternion (0, 0, 0, 0)) as GameObject;
+
+				groupController.GetComponent<GroupController> ().groupMembers.Add (this.gameObject);
+				groupController.GetComponent<GroupController> ().groupMembers.Add (collision.gameObject);
+
+				//Make them it's children 
+				collision.gameObject.transform.SetParent (groupController.transform);
+				this.gameObject.transform.SetParent (groupController.transform);
+
+				//Change follow targets
+				groupController.GetComponent<FollowTarget> ().target = this.gameObject.GetComponent<FollowTarget> ().target;
+				groupController.GetComponent<FollowTarget> ().rotationSpeed = this.gameObject.GetComponent<FollowTarget> ().rotationSpeed;
+				groupController.GetComponent<FollowTarget> ().followSpeed = this.gameObject.GetComponent<FollowTarget> ().followSpeed;
+
+
+				this.gameObject.GetComponent<FollowTarget> ().target = groupController;
+				this.gameObject.GetComponent<FollowTarget> ().rotationSpeed = 0;
+				collision.gameObject.GetComponent<FollowTarget> ().rotationSpeed = 0;
+				collision.gameObject.GetComponent<FollowTarget> ().target = groupController;
+
+
+				//disable collapsoble behavior on children
+				Destroy(collision.gameObject.GetComponent<Collapsible>());//.enabled = false;
+				Destroy(this);//.enabled = false;
+
+			}
 		}
 	}
 }
