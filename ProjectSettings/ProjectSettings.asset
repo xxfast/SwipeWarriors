@@ -136,7 +136,7 @@ PlayerSettings:
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   applicationIdentifier:
-    Android: com.Company.ProductName
+    Android: com.xfastgames.swipewarrior
     Standalone: unity.DefaultCompany.SwipeWarriors
     Tizen: com.Company.ProductName
     iOS: com.Company.ProductName
@@ -216,7 +216,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
+  AndroidKeystoreName: /Users/Isuru/Developer/Certificate/swipewarrior.keystore
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
