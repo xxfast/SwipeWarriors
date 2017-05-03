@@ -43,6 +43,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4610044538663398}
   - component: {fileID: 212389861573804426}
+  - component: {fileID: 61549322149121706}
+  - component: {fileID: 114328563950021588}
   m_Layer: 0
   m_Name: Sword Attack
   m_TagString: Untagged
@@ -92,6 +94,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.285
+--- !u!61 &61549322149121706
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066679694113424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.99, y: 3}
+    newSize: {x: 0.99, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99, y: 3}
+  m_EdgeRadius: 0
 --- !u!114 &114018841045967874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +144,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   staminaColor: {r: 0, g: 1, b: 0, a: 1}
   pathColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114328563950021588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066679694113424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689a34cdfc26dda4ba4f7c983c2aa16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  with: enemy
+  damageAmount: 10
+  staminaBar: {fileID: 114407556454872700}
 --- !u!114 &114375943148319308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,6 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 114407556454872700}
+  spinAccelerator: 1
+  rotationAmount: 1080
 --- !u!212 &212389861573804426
 SpriteRenderer:
   m_ObjectHideFlags: 1
