@@ -157,6 +157,21 @@ Prefab:
       propertyPath: hordesTargeting
       value: 
       objectReference: {fileID: 1782186753}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: waveProfiles.waves.Array.data[1].spawnFor
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114209276656794448, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+        type: 2}
+      propertyPath: waveProfiles.waves.Array.data[1].spanwFrequency
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114473832709778924, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
@@ -410,7 +425,7 @@ RectTransform:
   - {fileID: 1277077415}
   - {fileID: 583962279}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -516,7 +531,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4490800538675282, guid: 73ce8e09edd23413280b5ce939fb137f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1239832321467692, guid: 73ce8e09edd23413280b5ce939fb137f, type: 2}
       propertyPath: m_Name
@@ -818,7 +833,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1049,7 +1064,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2133456682
 GameObject:
