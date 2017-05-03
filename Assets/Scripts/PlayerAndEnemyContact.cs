@@ -20,5 +20,11 @@ public class PlayerAndEnemyContact : MonoBehaviour {
             LossText.text = "YOU LOSE!";
             Time.timeScale = 0;
         }
+
+        if (theCollider.gameObject.CompareTag("pickup"))
+        {
+            Debug.Log("Collided with Pickup");
+            theCollider.gameObject.SendMessage("onCollect", this.gameObject);
+        }
     }
 }

@@ -25,9 +25,11 @@ GameObject:
   - component: {fileID: 114427394925911836}
   - component: {fileID: 114371546094450676}
   - component: {fileID: 114815119494031142}
+  - component: {fileID: 114874079403982280}
+  - component: {fileID: 114924468778398464}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +141,7 @@ MonoBehaviour:
   moveDrain: 1
   moving: 0
   debugIndicators: 0
-  debugValues: 1
+  debugValues: 0
 --- !u!114 &114664901946421642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,6 +186,30 @@ MonoBehaviour:
   with: enemy
   damageAmount: 10
   staminaBar: {fileID: 114427394925911836}
+--- !u!114 &114874079403982280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354789025844552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9e380dba54b564b8e58c3e34db48d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+--- !u!114 &114924468778398464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354789025844552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bba989ea1fefcc459fe9a66140929b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!212 &212250952247725314
 SpriteRenderer:
   m_ObjectHideFlags: 1
