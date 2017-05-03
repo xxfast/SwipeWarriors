@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SetSpeed: 1
-  DeltaSpeed: -1
+  ScaleSpeed: 0.5
   Duration: 10
-  Stakable: 0
+  Stakable: 1
   DebugMessage: 0
 --- !u!212 &212481675385987340
 SpriteRenderer:

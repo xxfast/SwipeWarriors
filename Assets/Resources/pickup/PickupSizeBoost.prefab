@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SetSize: 0.4
-  DeltaSize: 0.2
+  ScaleSize: 2
   Duration: 10
-  Stakable: 0
+  Stakable: 1
   DebugMessage: 0
 --- !u!212 &212454910601154954
 SpriteRenderer:

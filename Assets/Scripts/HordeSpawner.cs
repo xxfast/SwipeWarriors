@@ -29,7 +29,7 @@ public class HordeSpawner : MonoBehaviour {
 	private List<EnemySpawner> waves = new List<EnemySpawner>();
 	private float time;
 
-	void Start(){
+    void Start(){
 		time = timeBetweenWaves;
 	}
 
@@ -47,18 +47,17 @@ public class HordeSpawner : MonoBehaviour {
 	/// Commenses a horde of invaders.
 	/// </summary>
 	void CommenseHorde () {
-		if (waveProfiles.waves != null && waveProfiles.waves.Count > 0) { 
+		if (waveProfiles.waves != null && waveProfiles.waves.Count > 0 && currentWaveNumber < waveProfiles.waves.Count) { 
 			waves.Add (gameObject.AddComponent (typeof(EnemySpawner)) as EnemySpawner);
 			WaveProfile currentProfile = waveProfiles.waves [currentWaveNumber];
 			waves [currentWaveNumber].enabled = true;
 			waves [currentWaveNumber].attachProfile (currentProfile);
 			waves [currentWaveNumber].target = hordesTargeting;
 			waves [currentWaveNumber].id = currentWaveNumber;
-			currentWaveNumber++;
+            currentWaveNumber++;
 		} else {
 			this.enabled = false;
 		}
 	}
-
 }
 
