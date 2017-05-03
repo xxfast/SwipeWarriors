@@ -17,10 +17,13 @@ public class PathMovement : MonoBehaviour {
     public GameObject attackArea;
 
     private int nextPointIndex = -1;
-    private bool pathComplete = false;
+	private bool pathComplete = false;
+	public bool isMoving = false;
     private float time;
     
 	public GameObject InstantiatedPath { get { return instantiatedPath; } }
+
+	public bool IsMoving { get { return isMoving; }}
 
     // Use this for initialization
     void Start () {
@@ -106,6 +109,7 @@ public class PathMovement : MonoBehaviour {
             attackArea.SetActive(false);
             staminaBar.recover();
             staminaBar.moving = false;
+			isMoving = false;
             return;
         }
 
@@ -114,7 +118,7 @@ public class PathMovement : MonoBehaviour {
         {
             time -= Time.deltaTime;
             staminaBar.moving = true;
-
+			isMoving = true;
             // start attacking if attack delay has passed.
             if (time <= 0.0)
                 attackArea.SetActive(true);
