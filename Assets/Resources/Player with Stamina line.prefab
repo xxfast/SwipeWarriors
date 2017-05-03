@@ -26,9 +26,11 @@ GameObject:
   - component: {fileID: 114925782812781630}
   - component: {fileID: 114276702319214340}
   - component: {fileID: 114201173798358512}
+  - component: {fileID: 114287439086587702}
+  - component: {fileID: 114105766677582080}
   m_Layer: 0
   m_Name: Player with Stamina line
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +110,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.285
+--- !u!114 &114105766677582080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239832321467692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bba989ea1fefcc459fe9a66140929b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!114 &114137068538883774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,6 +168,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   staminaColor: {r: 0, g: 1, b: 0, a: 1}
   pathColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114287439086587702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239832321467692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9e380dba54b564b8e58c3e34db48d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!114 &114582248465760244
 MonoBehaviour:
   m_ObjectHideFlags: 1
