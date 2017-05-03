@@ -19,6 +19,7 @@ public class Collapsible : MonoBehaviour {
 	{
 		if(collision.gameObject.tag.Contains("enemy")){
 			//nominate the initiater
+			if(collision.gameObject.GetComponent<Collapsible>() == null) return;
 			initiater = !collision.gameObject.GetComponent<Collapsible>().initiater;
 			if (initiater) {
 				//initiate the group controller
