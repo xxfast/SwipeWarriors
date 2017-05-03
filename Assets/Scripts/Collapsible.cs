@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collapsible : MonoBehaviour {
 
 	public bool initiater = false;
+	public GameObject groupController;
 
 	void Start () {
 		
@@ -17,11 +18,30 @@ public class Collapsible : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.tag.Contains("enemy")){
+			//nominate the initiater
 			initiater = !collision.gameObject.GetComponent<Collapsible>().initiater;
 			if (initiater) {
-				collision.gameObject.GetComponent<Collapsible>().enabled = false;
-				collision.gameObject.transform.SetParent (this.gameObject.transform);
-				Destroy (collision.gameObject.GetComponent<Rigidbody2D> ());
+				//initiate the group controller
+				if(this.groupController==null && collision.gameObject.GetComponent<Collapsible>().groupController==null)
+					groupController = Instantiate (Resources.Load<GameObject>("GroupController"), collision.transform.position, new Quaternion (0, 0, 0, 0)) as GameObject;
+
+				groupController.GetComponent<GroupController> ().groupMembers.Add (this.gameObject);
+				groupController.GetComponent<GroupController> ().groupMembers.Add (collision.gameObject);
+
+				//Make them it's children 
+				collision.gameObject.transform.SetParent (groupController.transform);
+				this.gameObject.transform.SetParent (groupController.transform);
+
+				//Change follow targets
+				groupController.GetComponent<FollowTarget> ().target = this.gameObject.GetComponent<FollowTarget> ().target;
+				this.gameObject.GetComponent<FollowTarget> ().target = groupController;
+				collision.gameObject.GetComponent<FollowTarget> ().target = groupController;
+
+
+				//disable collapsoble behavior on children
+				Destroy(collision.gameObject.GetComponent<Collapsible>());//.enabled = false;
+				Destroy(this);//.enabled = false;
+
 			}
 		}
 	}
