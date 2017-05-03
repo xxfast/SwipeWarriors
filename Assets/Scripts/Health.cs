@@ -29,7 +29,6 @@ public class Health : MonoBehaviour {
 		ResizeWithHealth ();
 		if (currentHealth <= 0) {
 			alive = false;
-			Destroy (this.gameObject);
 		}
     }
 

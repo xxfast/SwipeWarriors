@@ -625,11 +625,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114925782812781630, guid: 73ce8e09edd23413280b5ce939fb137f,
-        type: 2}
-      propertyPath: LossText
-      value: 
-      objectReference: {fileID: 1277077416}
     - target: {fileID: 1239832321467692, guid: 73ce8e09edd23413280b5ce939fb137f, type: 2}
       propertyPath: m_Name
       value: Player
