@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114314711893940370}
   - component: {fileID: 114291713475178578}
   - component: {fileID: 60202819756168348}
-  - component: {fileID: 114846078258886858}
   - component: {fileID: 50747411368309174}
   m_Layer: 8
   m_Name: basic
@@ -41,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1228160630225258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.97, y: -3.79, z: 0}
-  m_LocalScale: {x: 0.18763936, y: 0.18763936, z: 0.18763936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,7 +81,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.73}
+    oldSize: {x: 0.6, y: 0.52}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -90,27 +89,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.71, y: -0.315}
-      - {x: 0.41, y: 0.205}
-      - {x: 0.38, y: 0.255}
-      - {x: 0.22999999, y: 0.515}
-      - {x: 0.07, y: 0.79499996}
-      - {x: 0.02, y: 0.865}
-      - {x: -0.03, y: 0.865}
-      - {x: -0.19, y: 0.59499997}
-      - {x: -0.29999998, y: 0.405}
-      - {x: -0.38, y: 0.265}
-      - {x: -0.69, y: -0.275}
-      - {x: -0.79999995, y: -0.465}
-      - {x: -0.88, y: -0.60499996}
-      - {x: -0.95, y: -0.72499996}
-      - {x: -1, y: -0.815}
-      - {x: -1, y: -0.865}
-      - {x: 1, y: -0.865}
-      - {x: 1, y: -0.84499997}
-      - {x: 0.97999996, y: -0.78499997}
-      - {x: 0.9, y: -0.645}
-      - {x: 0.87, y: -0.59499997}
+    - - {x: -0.03, y: 0.26}
+      - {x: -0.29999998, y: -0.17}
+      - {x: -0.29999998, y: -0.26}
+      - {x: 0.29999998, y: -0.26}
+      - {x: 0.29999998, y: -0.19999999}
+      - {x: 0.03, y: 0.26}
 --- !u!114 &114291713475178578
 MonoBehaviour:
   m_ObjectHideFlags: 1

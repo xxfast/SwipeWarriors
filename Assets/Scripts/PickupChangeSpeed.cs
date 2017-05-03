@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickupChangeSpeed : MonoBehaviour {
 
     public float SetSpeed;
-    public float DeltaSpeed;
+    public float ScaleSpeed;
 
     public int Duration;
 
@@ -20,7 +20,7 @@ public class PickupChangeSpeed : MonoBehaviour {
 
         if (Stakable)
         {
-            gameObject.GetComponent<PathMovement>().speed += DeltaSpeed;
+            gameObject.GetComponent<PathMovement>().speed = gameObject.GetComponent<PathMovement>().speed * ScaleSpeed;
         }
         else
         {
