@@ -34,7 +34,13 @@ public class Collapsible : MonoBehaviour {
 
 				//Change follow targets
 				groupController.GetComponent<FollowTarget> ().target = this.gameObject.GetComponent<FollowTarget> ().target;
+				groupController.GetComponent<FollowTarget> ().rotationSpeed = this.gameObject.GetComponent<FollowTarget> ().rotationSpeed;
+				groupController.GetComponent<FollowTarget> ().followSpeed = this.gameObject.GetComponent<FollowTarget> ().followSpeed;
+
+
 				this.gameObject.GetComponent<FollowTarget> ().target = groupController;
+				this.gameObject.GetComponent<FollowTarget> ().rotationSpeed = 0;
+				collision.gameObject.GetComponent<FollowTarget> ().rotationSpeed = 0;
 				collision.gameObject.GetComponent<FollowTarget> ().target = groupController;
 
 

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4767831808273686}
   - component: {fileID: 114722794980813020}
   - component: {fileID: 50604971021742502}
+  - component: {fileID: 114202804064471166}
   m_Layer: 0
   m_Name: GroupController
   m_TagString: enemy
@@ -61,6 +62,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114202804064471166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944614568809132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1628d1b0120524d4fb09c35f8ae52713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupMembers: []
 --- !u!114 &114722794980813020
 MonoBehaviour:
   m_ObjectHideFlags: 1
