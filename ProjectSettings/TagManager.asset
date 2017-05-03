@@ -6,6 +6,9 @@ TagManager:
   tags:
   - enemy
   - center
+  - obstacle
+  - player
+  - pickup
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - 
   - enemies
   - center
-  - 
+  - obstacle
   - 
   - 
   - 
@@ -48,4 +51,7 @@ TagManager:
     locked: 0
   - name: enemies
     uniqueID: 4214407503
+    locked: 0
+  - name: obstacle
+    uniqueID: 3433818069
     locked: 0

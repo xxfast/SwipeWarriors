@@ -27,8 +27,9 @@ public class Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ResizeWithHealth ();
-        if (currentHealth <= 0)
-            alive = false;
+		if (currentHealth <= 0) {
+			alive = false;
+		}
     }
 
 	void ResizeWithHealth(){

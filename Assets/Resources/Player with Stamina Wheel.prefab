@@ -60,9 +60,11 @@ GameObject:
   - component: {fileID: 58021255655804304}
   - component: {fileID: 114362549911023396}
   - component: {fileID: 114798848330596254}
+  - component: {fileID: 114758133247728452}
+  - component: {fileID: 114361083423272828}
   m_Layer: 0
   m_Name: Player with Stamina Wheel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +190,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114361083423272828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790710475914842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bba989ea1fefcc459fe9a66140929b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!114 &114362549911023396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,10 +215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 235
   maxStamina: 250
+  minimumStamina: 0
   standardRestore: 5
   crashRestore: 1
   attackDrain: 15
   moveDrain: 1
+  moving: 0
   debugIndicators: 1
   debugValues: 0
 --- !u!114 &114726937893598288
@@ -221,6 +237,18 @@ MonoBehaviour:
   with: enemy
   damageAmount: 10
   staminaBar: {fileID: 114362549911023396}
+--- !u!114 &114758133247728452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790710475914842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9e380dba54b564b8e58c3e34db48d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!114 &114798848330596254
 MonoBehaviour:
   m_ObjectHideFlags: 1

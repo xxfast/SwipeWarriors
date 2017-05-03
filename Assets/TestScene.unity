@@ -145,7 +145,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4761314332087110, guid: 6f4bfec162a3c487cbeb7b52db262e38, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114473832709778924, guid: 6f4bfec162a3c487cbeb7b52db262e38,
         type: 2}
@@ -477,7 +477,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1156652998
 Prefab:
@@ -518,11 +518,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114925782812781630, guid: 73ce8e09edd23413280b5ce939fb137f,
-        type: 2}
-      propertyPath: LossText
-      value: 
-      objectReference: {fileID: 1277077416}
     - target: {fileID: 1239832321467692, guid: 73ce8e09edd23413280b5ce939fb137f, type: 2}
       propertyPath: m_Name
       value: Player

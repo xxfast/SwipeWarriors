@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnOnDeath : MonoBehaviour {
 
 	public float dropProbability = 1; // number between 0.0 and 1.0
-	public Object drops;
+	public List<GameObject> drops;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,8 @@ public class SpawnOnDeath : MonoBehaviour {
 			bool drop = Random.value <= dropProbability;
 			if(drop)
 			{
-				GameObject pickup = Instantiate(drops, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
+                int itemToDrop = Random.Range(0, drops.Count - 1);
+				GameObject pickup = Instantiate(drops[itemToDrop], new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
 			}
 
             // Distroy Object
