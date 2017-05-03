@@ -5,6 +5,8 @@ using UnityEngine;
 public class GravityBehavior : MonoBehaviour {
 
 	public GameObject _gravitateToward;
+	public GameObject jetpack;
+
 	public float gravity = 10;
 
 	private Vector2 direction;
@@ -18,10 +20,13 @@ public class GravityBehavior : MonoBehaviour {
 		if (_gravitateToward) {
 			Vector3 vectorToTarget = _gravitateToward.transform.position - transform.position;
 
-			if (shouldGravitate && !this.gameObject.GetComponent<PathMovement> ().IsMoving)
+			if (shouldGravitate && !this.gameObject.GetComponent<PathMovement> ().IsMoving) {
+				if(jetpack) this.jetpack.GetComponent<ParticleSystem> ().Stop ();
 				this.GetComponent<Rigidbody2D> ().AddForce (vectorToTarget);
-			else
+			} else {
 				this.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+				if(jetpack) this.jetpack.GetComponent<ParticleSystem> ().Play ();
+			}
 			
 			transform.rotation = Quaternion.FromToRotation (transform.position,_gravitateToward.transform.position);
 			float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
