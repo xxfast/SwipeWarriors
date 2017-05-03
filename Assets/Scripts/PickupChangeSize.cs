@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickupChangeSize : MonoBehaviour {
 
     public float SetSize;
-    public float DeltaSize;
+    public float ScaleSize;
 
     public int Duration;
 
@@ -20,8 +20,8 @@ public class PickupChangeSize : MonoBehaviour {
 
         if(Stakable)
         {
-            Vector3 scale = new Vector3(DeltaSize, DeltaSize);
-            gameObject.transform.localScale += scale;
+            Vector3 scale = new Vector3(gameObject.transform.localScale.x * ScaleSize, gameObject.transform.localScale.y * ScaleSize);
+            gameObject.transform.localScale = scale;
         }
         else
         {
