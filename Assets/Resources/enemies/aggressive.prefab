@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114846078258886858}
   - component: {fileID: 50747411368309174}
   - component: {fileID: 114526055853409856}
+  - component: {fileID: 114083411064512928}
   m_Layer: 8
   m_Name: aggressive
   m_TagString: enemy
@@ -97,6 +98,20 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -0.099999994}
       - {x: 0.099999994, y: -0.06}
       - {x: 0.02, y: 0.099999994}
+--- !u!114 &114083411064512928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b574932361344129cf11cd23230dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackFrequency: 1
+  attackDamage: 1
+  attackAnyoneFlagged: player
 --- !u!114 &114122047896101154
 MonoBehaviour:
   m_ObjectHideFlags: 1

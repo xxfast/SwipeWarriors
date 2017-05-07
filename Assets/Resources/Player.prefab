@@ -23,11 +23,11 @@ GameObject:
   - component: {fileID: 114664901946421642}
   - component: {fileID: 58842185514952520}
   - component: {fileID: 114427394925911836}
+  - component: {fileID: 114339059991361706}
   - component: {fileID: 114371546094450676}
   - component: {fileID: 114815119494031142}
   - component: {fileID: 114874079403982280}
   - component: {fileID: 114924468778398464}
-  - component: {fileID: 114339059991361706}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player

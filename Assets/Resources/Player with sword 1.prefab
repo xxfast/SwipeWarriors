@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114405732430927786}
   - component: {fileID: 58873431564237408}
   - component: {fileID: 114407556454872700}
+  - component: {fileID: 114031028439252000}
   - component: {fileID: 114375943148319308}
   - component: {fileID: 114173309153266684}
   - component: {fileID: 114018841045967874}
@@ -131,6 +132,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDelay: 0.1
+--- !u!114 &114031028439252000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027982187850378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ea72de8bec6445d974898799236965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
 --- !u!114 &114173309153266684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +201,7 @@ MonoBehaviour:
   attackDelay: 0
   staminaBar: {fileID: 114407556454872700}
   attackArea: {fileID: 1066679694113424}
+  isMoving: 0
 --- !u!114 &114407556454872700
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,11 +5,11 @@ using UnityEngine;
 public class AttackingBehavior : MonoBehaviour {
 
 	public float attackFrequency = 1;
-	private int attackDamage = 1;
+	public int attackDamage = 1;
 	public string attackAnyoneFlagged;
 
-	private float time;
-	private float isAllowedToAttack = false;
+	public float time;
+	public bool isAllowedToAttack = false;
 
 	void Start(){
 		time = attackFrequency;
@@ -17,7 +17,12 @@ public class AttackingBehavior : MonoBehaviour {
 
 	void Update () {
 		time -= Time.deltaTime;
-		isAllowedToAttack = (time <= 0);
+		if ((time <= 0)) {
+			isAllowedToAttack = true;
+			time = attackFrequency;
+		} else {
+			isAllowedToAttack = false;
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 50747411368309174}
   - component: {fileID: 114422191687201024}
   - component: {fileID: 114846078258886858}
+  - component: {fileID: 114421225544626206}
   m_Layer: 8
   m_Name: basic
   m_TagString: enemy
@@ -127,6 +128,20 @@ MonoBehaviour:
   - {fileID: 1020990225526748, guid: 6fb34a9a0fa5ab141a5b18904315a1c7, type: 2}
   - {fileID: 1910215182794802, guid: 292a5d02c11cc2247b984ddd78f46ef5, type: 2}
   - {fileID: 1132950390070956, guid: b951dd7d03f2d074582974f88db843c0, type: 2}
+--- !u!114 &114421225544626206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b574932361344129cf11cd23230dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackFrequency: 1
+  attackDamage: 2
+  attackAnyoneFlagged: player
 --- !u!114 &114422191687201024
 MonoBehaviour:
   m_ObjectHideFlags: 1
