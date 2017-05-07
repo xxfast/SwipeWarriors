@@ -4,39 +4,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-	// Use this for initialization
 	public int maxHealth = 10;
-
-    [SerializeField]
     private int currentHealth;
 
-	private Vector2 initalScale;
+	public bool isDead { get { return (currentHealth <= 0); } }
 
-    [SerializeField]
-    private bool alive;
-   
-
-	public bool isDead { get { return !alive; } }
+	public int CurrentHealth { get { return currentHealth; } }
 
 	void Start () {
 		currentHealth = maxHealth;
-        alive = true;
-		initalScale = this.gameObject.transform.localScale;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		ResizeWithHealth ();
 		if (currentHealth <= 0) {
-			alive = false;
+			Destroy (this.gameObject);
 		}
     }
-
-	void ResizeWithHealth(){
-		float ratio = (float)currentHealth / (float)maxHealth;
-		var newScale = new Vector2(initalScale.x * ratio, initalScale.y * ratio);
-		this.gameObject.transform.localScale = newScale;
-	}
 
 	public void DealDamage(int amount){
 		currentHealth -= amount;

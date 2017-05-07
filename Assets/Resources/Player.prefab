@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114815119494031142}
   - component: {fileID: 114874079403982280}
   - component: {fileID: 114924468778398464}
+  - component: {fileID: 114339059991361706}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,6 +110,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.285
+--- !u!114 &114339059991361706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354789025844552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ea72de8bec6445d974898799236965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!114 &114371546094450676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,6 +173,7 @@ MonoBehaviour:
   attackDelay: 0.5
   staminaBar: {fileID: 114427394925911836}
   attackArea: {fileID: 1834709636764362}
+  isMoving: 0
 --- !u!114 &114815119494031142
 MonoBehaviour:
   m_ObjectHideFlags: 1

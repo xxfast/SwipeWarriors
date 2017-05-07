@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114291713475178578}
   - component: {fileID: 60202819756168348}
   - component: {fileID: 50747411368309174}
+  - component: {fileID: 114455903135449374}
+  - component: {fileID: 114846078258886858}
   m_Layer: 8
   m_Name: tank
   m_TagString: enemy
@@ -113,8 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  currentHealth: 0
-  alive: 0
 --- !u!114 &114448472549016684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,17 +127,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropProbability: 1
-  drops: {fileID: 1132950390070956, guid: b951dd7d03f2d074582974f88db843c0, type: 2}
-  dropProbability: 0.5
   drops:
-  - {fileID: 1717627546650802, guid: 8216fae38aa71584ea1bc71c661379fe, type: 2}
-  - {fileID: 1723289808422224, guid: 8992464717c6c984fa7be8383f81a50c, type: 2}
-  - {fileID: 1020990225526748, guid: 6fb34a9a0fa5ab141a5b18904315a1c7, type: 2}
-  - {fileID: 1910215182794802, guid: 292a5d02c11cc2247b984ddd78f46ef5, type: 2}
-  - {fileID: 1132950390070956, guid: b951dd7d03f2d074582974f88db843c0, type: 2}
---- !u!114 &114846078258886858
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &114455903135449374
 MonoBehaviour:
   m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2132ba2ac5a54c67a02ce847864d0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114846078258886858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228160630225258}
@@ -146,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033717716521645ab9e2104dcd72c232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initiater: 0
+  groupController: {fileID: 0}
 --- !u!114 &114995690594933252
 MonoBehaviour:
   m_ObjectHideFlags: 1
