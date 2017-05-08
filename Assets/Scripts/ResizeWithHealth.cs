@@ -6,6 +6,7 @@ public class ResizeWithHealth : MonoBehaviour {
 
 	private Health health;
 	private Vector2 initalScale;
+	public float minimumScale = 0.5f;
 
 	void Start(){
 		health = this.gameObject.GetComponent<Health> ();
@@ -17,7 +18,8 @@ public class ResizeWithHealth : MonoBehaviour {
 
 	void Resize(){
 		float ratio = (float)health.CurrentHealth / (float)health.maxHealth;
-		var newScale = new Vector2(initalScale.x * ratio, initalScale.y * ratio);
-		this.gameObject.transform.localScale = newScale;
+		Vector2 newScale = new Vector2(initalScale.x * ratio, initalScale.y * ratio);
+		if(newScale.magnitude>Vector2.Scale(initalScale,new Vector2(minimumScale,minimumScale)).magnitude)
+			this.gameObject.transform.localScale = newScale;
 	}
 }
