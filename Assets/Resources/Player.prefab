@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 114820069366093346}
   - component: {fileID: 114193073459679664}
   - component: {fileID: 114305599759759952}
+  - component: {fileID: 114569804631229204}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -317,9 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5327740314992d4bb57d29540d92a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameText: {fileID: 0}
-  WinText: You Win!
-  LossText: Game Over
   DebugMessages: 0
 --- !u!114 &114536710289221404
 MonoBehaviour:
@@ -415,6 +413,21 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+--- !u!114 &114569804631229204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897399237274460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e051ba1a691194042a43c3a5fc0ed790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initalScale: {x: 0, y: 0, z: 0}
+  scaleTime: 0
+  initalSpeed: 0
+  speedTime: 0
 --- !u!114 &114586247798548792
 MonoBehaviour:
   m_ObjectHideFlags: 1

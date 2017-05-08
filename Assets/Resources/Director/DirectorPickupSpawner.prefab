@@ -52,5 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pickups:
-  - {fileID: 1545242975245294, guid: 711e1cef182595640b756cdf97801040, type: 2}
+  - {fileID: 1744576665154696, guid: 8216fae38aa71584ea1bc71c661379fe, type: 2}
+  - {fileID: 1111651058012886, guid: 8992464717c6c984fa7be8383f81a50c, type: 2}
+  - {fileID: 1552949975900342, guid: 6fb34a9a0fa5ab141a5b18904315a1c7, type: 2}
+  - {fileID: 1939565456279292, guid: b4680a4a0fba4de4a9ba0025b37e9c2f, type: 2}
+  - {fileID: 1200635888497338, guid: 711e1cef182595640b756cdf97801040, type: 2}
   DropProbability: 1
