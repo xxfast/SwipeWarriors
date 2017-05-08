@@ -7,6 +7,8 @@ public class PlayerAndEnemyContact : MonoBehaviour {
 
     public Text LossText;
 
+    public int CollectionScore;
+
     void Start()
     {
         LossText.text = "";
@@ -25,6 +27,7 @@ public class PlayerAndEnemyContact : MonoBehaviour {
         {
             Debug.Log("Collided with Pickup");
             theCollider.gameObject.SendMessage("onCollect", this.gameObject);
+            GameObject.Find("ScoreKeeper").SendMessage("Add", CollectionScore);
         }
     }
 }

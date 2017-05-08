@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LossText: {fileID: 0}
+  CollectionScore: 10
 --- !u!114 &114427394925911836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,6 +161,7 @@ MonoBehaviour:
   attackDelay: 0.5
   staminaBar: {fileID: 114427394925911836}
   attackArea: {fileID: 1834709636764362}
+  isMoving: 0
 --- !u!114 &114815119494031142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,6 +188,7 @@ MonoBehaviour:
   with: enemy
   damageAmount: 10
   staminaBar: {fileID: 114427394925911836}
+  DamageScore: 0
 --- !u!114 &114874079403982280
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   damageObjectsTagged: enemy
+  DamageScore: 50
 --- !u!212 &212053634481581268
 SpriteRenderer:
   m_ObjectHideFlags: 1

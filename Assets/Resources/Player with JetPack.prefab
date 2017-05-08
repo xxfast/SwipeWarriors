@@ -31,7 +31,7 @@ GameObject:
   - component: {fileID: 50046670499107740}
   - component: {fileID: 114195118735711502}
   m_Layer: 0
-  m_Name: Player with Jetpack
+  m_Name: Player with JetPack
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   with: enemy
   damageAmount: 10
   staminaBar: {fileID: 114784925065162576}
+  DamageScore: 0
 --- !u!114 &114519100700045386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LossText: {fileID: 0}
+  CollectionScore: 0
 --- !u!114 &114716415159432678
 MonoBehaviour:
   m_ObjectHideFlags: 1
