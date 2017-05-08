@@ -4,36 +4,36 @@ using UnityEngine;
 
 public class AttackingBehavior : MonoBehaviour {
 
-	public float attackFrequency = 1;
+	//Amount of damage dealt on one hit
 	public int attackDamage = 1;
+	//Frequency of attack
+	public float attackFrequency = 1;
+	//Tag of target
 	public string attackAnyoneFlagged;
 
-	public float time;
-	public bool isAllowedToAttack = false;
+	private float time;
+	public bool isAllowed = false;
 
 	void Start(){
 		time = attackFrequency;
 	}
 
-	void Update () {
+	void Update(){
 		time -= Time.deltaTime;
-		if ((time <= 0)) {
-			isAllowedToAttack = true;
-			time = attackFrequency;
-		} else {
-			isAllowedToAttack = false;
-		}
+		isAllowed = (time <= 0);
 	}
-
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(isAllowedToAttack){
-			if(collision.gameObject.CompareTag(attackAnyoneFlagged)){
+		if (isAllowed) {
+			if (collision.gameObject.CompareTag (attackAnyoneFlagged)) {
 				Health health;
-				if(health = collision.gameObject.GetComponent<Health>()){
+				if (health = collision.gameObject.GetComponent<Health> ()) {
 					health.DealDamage (attackDamage);
 				}
 			}
+			isAllowed = false;
+			Start ();
 		}
 	}
+
 }

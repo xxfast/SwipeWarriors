@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
 	public int maxHealth = 10;
-    private int currentHealth;
+	public int currentHealth;
 
 	public bool isDead { get { return (currentHealth <= 0); } }
 
