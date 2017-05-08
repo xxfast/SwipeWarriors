@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114291713475178578}
   - component: {fileID: 60202819756168348}
   - component: {fileID: 50747411368309174}
+  - component: {fileID: 114846078258886858}
   m_Layer: 8
   m_Name: boss
   m_TagString: enemy
@@ -127,7 +128,7 @@ MonoBehaviour:
   drops: []
 --- !u!114 &114846078258886858
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228160630225258}
@@ -136,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033717716521645ab9e2104dcd72c232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initiater: 0
+  groupController: {fileID: 0}
 --- !u!114 &114995690594933252
 MonoBehaviour:
   m_ObjectHideFlags: 1

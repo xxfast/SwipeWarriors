@@ -31,7 +31,7 @@ GameObject:
   - component: {fileID: 50046670499107740}
   - component: {fileID: 114195118735711502}
   m_Layer: 0
-  m_Name: Player with Jetpack
+  m_Name: Player with JetPack
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
