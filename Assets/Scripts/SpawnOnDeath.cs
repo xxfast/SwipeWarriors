@@ -24,9 +24,6 @@ public class SpawnOnDeath : MonoBehaviour {
                 int itemToDrop = Random.Range(0, drops.Count - 1);
 				GameObject pickup = Instantiate(drops[itemToDrop], new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
 			}
-
-            // Distroy Object
-            Destroy(this.gameObject);
         }
 	}
 }
