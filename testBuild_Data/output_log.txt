@@ -1,23 +1,24 @@
 Initialize engine version: 5.6.0f3 (497a0f351392)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 770 (ID=0x1184)
-    Vendor:   NVIDIA
-    VRAM:     2017 MB
-    Driver:   22.21.13.8165
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics (ID=0x22b1)
+    Vendor:   Intel
+    VRAM:     1131 MB
+    Driver:   10.18.15.4256
 Begin MonoManager ReloadAssembly
-Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.108 seconds
-Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: B:\ProgramScratch\Swipe Warriors\SwipeWarriors\testBuild_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 5760x1080 at -1920,0
+Platform assembly: C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.068 seconds
+Platform assembly: C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\SWE40001\TheProject\SwipeWarriors\testBuild_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
