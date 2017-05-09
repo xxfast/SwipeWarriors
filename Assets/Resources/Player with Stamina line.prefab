@@ -120,10 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 235
   maxStamina: 250
+  minimumStamina: 0
   standardRestore: 5
   crashRestore: 1
   attackDrain: 15
   moveDrain: 1
+  moving: 0
   debugIndicators: 1
   debugValues: 0
 --- !u!114 &114276702319214340
@@ -154,6 +156,7 @@ MonoBehaviour:
   minPathPointDistance: 0.1
   pathPrefab: {fileID: 1041409077557290, guid: d9d5a9ce672b0494e995d999e7efae2e, type: 2}
   speed: 3
+  attackDelay: 0
   staminaBar: {fileID: 114137068538883774}
   attackArea: {fileID: 1949480181982760}
 --- !u!114 &114925782812781630

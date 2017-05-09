@@ -14,7 +14,7 @@ public class Health : MonoBehaviour {
 
     [SerializeField]
     private bool alive;
-
+    [SerializeField]
     private bool hit;
    
 

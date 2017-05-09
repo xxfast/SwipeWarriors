@@ -36,4 +36,8 @@ public class FollowTarget : MonoBehaviour {
 		this.gameObject.GetComponent<Rigidbody2D> ().angularVelocity = 0;
 	}
 
+    void LimitForces()
+    {
+        
+    }
 }
