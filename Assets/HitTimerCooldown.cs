@@ -20,15 +20,20 @@ public class HitTimerCooldown : MonoBehaviour {
             {
                 started = true;
                 timeLeft = cooldownTime;
+                //Turns the hit object red
+                this.GetComponent<SpriteRenderer>().color = new Color(128, 0, 0);
             }
             //Otherwise, countdown the time left
             else
             {
                 timeLeft -= Time.deltaTime;
+                //When the cooldown is finished, the enemy is stopped being hit
                 if (timeLeft <= 0)
                 {
                     started = false;
                     healthBar.isHit = false;
+                    //Turns the object back to its normal color
+                    this.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
                 }
             }
         }
