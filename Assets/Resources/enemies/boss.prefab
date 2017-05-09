@@ -25,6 +25,9 @@ GameObject:
   - component: {fileID: 114291713475178578}
   - component: {fileID: 60202819756168348}
   - component: {fileID: 50747411368309174}
+  - component: {fileID: 114407874428763582}
+  - component: {fileID: 114846078258886858}
+  - component: {fileID: 114408643173186134}
   m_Layer: 8
   m_Name: boss
   m_TagString: enemy
@@ -111,7 +114,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  alive: 0
+--- !u!114 &114407874428763582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2132ba2ac5a54c67a02ce847864d0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumScale: 0
+--- !u!114 &114408643173186134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b574932361344129cf11cd23230dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 3
+  attackFrequency: 1
+  attackAnyoneFlagged: player
+  isAllowed: 0
 --- !u!114 &114478347809919382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,7 +156,7 @@ MonoBehaviour:
   drops: []
 --- !u!114 &114846078258886858
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228160630225258}
@@ -136,6 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033717716521645ab9e2104dcd72c232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initiater: 0
+  groupController: {fileID: 0}
 --- !u!114 &114995690594933252
 MonoBehaviour:
   m_ObjectHideFlags: 1

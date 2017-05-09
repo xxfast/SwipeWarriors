@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114011318844487308}
   - component: {fileID: 114445570654656418}
   - component: {fileID: 114514257340439894}
+  - component: {fileID: 114997536107470616}
   m_Layer: 8
   m_Name: intrusive
   m_TagString: enemy
@@ -163,8 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  currentHealth: 0
-  alive: 0
 --- !u!114 &114445570654656418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,6 +190,17 @@ MonoBehaviour:
   - {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508, type: 2}
   frequency: 10
   targetOfTheReproduced: {fileID: 0}
+--- !u!114 &114997536107470616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741175997469908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2132ba2ac5a54c67a02ce847864d0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212811934364388616
 SpriteRenderer:
   m_ObjectHideFlags: 1
