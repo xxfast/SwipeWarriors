@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/EnemyTestScene.unity
-    guid: 691e08a6532064b3b8e8b18e6cf22307
+    path: Assets/SaveTheKingdom.unity
+    guid: 0cbdf36fd8c644038879967f437fe60c
+  - enabled: 1
+    path: Assets/JetPackSavesThePlanet.unity
+    guid: 6f0a312f799444931927c1d7d135871d
