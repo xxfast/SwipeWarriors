@@ -10,7 +10,7 @@ public class PanningBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 newPosition = player.transform.position - anchor.transform.position;
+		Vector3 newPosition = Vector2.Lerp( player.transform.position, anchor.transform.position,0.5f);
 		newPosition.z -= 100;
 		this.transform.position =  newPosition;
 	}
