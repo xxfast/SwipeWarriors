@@ -14,13 +14,21 @@ public class Health : MonoBehaviour {
 
     [SerializeField]
     private bool alive;
+
+    private bool hit;
    
 
 	public bool isDead { get { return !alive; } }
+    public bool isHit
+    {
+        get { return hit; }
+        set { hit = value; }
+    }
 
 	void Start () {
 		currentHealth = maxHealth;
         alive = true;
+        hit = false;
 		initalScale = this.gameObject.transform.localScale;
 	}
 	
@@ -41,5 +49,6 @@ public class Health : MonoBehaviour {
 
 	public void DealDamage(int amount){
 		currentHealth -= amount;
+        hit = true;
 	}
 }

@@ -14,11 +14,16 @@ public class PlayerAndEnemyContact : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D theCollider)
     {
-        //When an enemy collides with the player, the game is over
+        //When an enemy collides with the player, the player gets hit
         if (theCollider.gameObject.CompareTag("enemy"))
         {
-            LossText.text = "YOU LOSE!";
-            Time.timeScale = 0;
+            //check if the enemy is hit, if not then deal damage to the player
+            Health healthBar = (Health)theCollider.gameObject.GetComponent(typeof(Health));
+            if (!healthBar.isHit)
+            {
+                LossText.text = "YOU LOSE!";
+                Time.timeScale = 0;
+            }
         }
     }
 }
