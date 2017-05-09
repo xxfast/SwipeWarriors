@@ -7,6 +7,8 @@ public class HitTimerCooldown : MonoBehaviour {
     //This script handles the cooldown for when enemies get hit
     public Health healthBar;
     public float cooldownTime;
+    public int knockbackForce;
+    public GameObject knockbackFrom;
 
     private float timeLeft = 0.0f;
     private bool started = false;
@@ -22,6 +24,12 @@ public class HitTimerCooldown : MonoBehaviour {
                 timeLeft = cooldownTime;
                 //Turns the hit object red
                 this.GetComponent<SpriteRenderer>().color = new Color(128, 0, 0);
+                //Knockback force added here
+                Vector2 knockBack = this.transform.position - knockbackFrom.transform.position;
+                knockBack.Normalize();
+                knockBack *= knockbackForce;
+
+                this.GetComponent<Rigidbody2D>().AddForce(knockBack);
             }
             //Otherwise, countdown the time left
             else
