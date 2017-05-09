@@ -18,12 +18,21 @@ public class SlownessOnImpact : MonoBehaviour {
 		if(e.gameObject.GetComponent<PathMovement> ()){
 			e.gameObject.GetComponent<PathMovement> ().speed = e.gameObject.GetComponent<PathMovement>().speed / slownessFactor;
 		}
+
+		if (e.gameObject.GetComponent<Rigidbody2D> ()) {
+			e.gameObject.GetComponent<Rigidbody2D> ().drag = e.gameObject.GetComponent<Rigidbody2D> ().drag / slownessFactor;
+			e.gameObject.GetComponent<Rigidbody2D> ().angularDrag = e.gameObject.GetComponent<Rigidbody2D> ().angularDrag / slownessFactor;
+		}
 	}
 
 	private void OnTriggerExit2D(Collider2D e)
 	{
 		if(e.gameObject.GetComponent<PathMovement> ()){
 			e.gameObject.GetComponent<PathMovement> ().speed = e.gameObject.GetComponent<PathMovement>().speed * slownessFactor;
+		}
+		if (e.gameObject.GetComponent<Rigidbody2D> ()) {
+			e.gameObject.GetComponent<Rigidbody2D> ().drag = e.gameObject.GetComponent<Rigidbody2D> ().drag * slownessFactor;
+			e.gameObject.GetComponent<Rigidbody2D> ().angularDrag = e.gameObject.GetComponent<Rigidbody2D> ().angularDrag * slownessFactor;
 		}
 	}
 }
