@@ -291,6 +291,7 @@ MonoBehaviour:
   Speed: 3
   AttackDelay: 0.3
   MinimumPathPointDistance: 0.1
+  DynamicTimeDilation: 0
 --- !u!114 &114202748188605824
 MonoBehaviour:
   m_ObjectHideFlags: 1

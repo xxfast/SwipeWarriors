@@ -57,4 +57,4 @@ MonoBehaviour:
   - {fileID: 1552949975900342, guid: 6fb34a9a0fa5ab141a5b18904315a1c7, type: 2}
   - {fileID: 1939565456279292, guid: b4680a4a0fba4de4a9ba0025b37e9c2f, type: 2}
   - {fileID: 1200635888497338, guid: 711e1cef182595640b756cdf97801040, type: 2}
-  DropProbability: 1
+  DropProbability: 0.2

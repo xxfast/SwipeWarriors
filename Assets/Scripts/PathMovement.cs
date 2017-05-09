@@ -26,6 +26,7 @@ public class PathMovement : MonoBehaviour {
     public float Speed;
     public float AttackDelay;
     public float MinimumPathPointDistance;
+    public bool DynamicTimeDilation;
 
     // Misc
     private int nextPointIndex;
@@ -66,9 +67,13 @@ public class PathMovement : MonoBehaviour {
             EventSystem.current.currentSelectedGameObject == null
             )
         {
-
             if (Input.GetMouseButton(0))
             {
+                if(DynamicTimeDilation) // Message Game Director to set time dilation
+                    GameObject.Find("DirectorGame").SendMessage("ToggleDilation");
+                else
+                    GameObject.Find("DirectorGame").SendMessage("DilateTime");
+
                 if (pathComplete)
                 {
                     ResetPath();
@@ -80,17 +85,18 @@ public class PathMovement : MonoBehaviour {
                     nextPointIndex = 0;
                 }
                 if (instantiatedPath == null)
-                {
                     instantiatedPath = Instantiate(pathPrefab);
-                }
                 Vector3 nextPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
                 if (Vector3.Distance(nextPoint, path[path.Count - 1]) > MinimumPathPointDistance)
-                {
                     path.Add(nextPoint);
-                }
             }
             if (Input.GetMouseButtonUp(0))
             {
+                if (DynamicTimeDilation) // Message Game Director to restore time dilation
+                    GameObject.Find("DirectorGame").SendMessage("ToggleDilation");
+                else
+                    GameObject.Find("DirectorGame").SendMessage("RestoreTime");
+
                 Vector3 lastPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
                 path.Add(lastPoint);
                 pathComplete = true;
