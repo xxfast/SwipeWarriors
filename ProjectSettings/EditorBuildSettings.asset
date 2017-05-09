@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JetPackSavesThePlanet.unity
     guid: 6f0a312f799444931927c1d7d135871d
+  - enabled: 1
+    path: Assets/Pathogen.unity
+    guid: dd6c174dbcb414fbcb3443c47ffe9e25

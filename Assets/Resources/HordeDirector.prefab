@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4761314332087110}
   - component: {fileID: 114209276656794448}
   - component: {fileID: 114628306343892380}
+  - component: {fileID: 114143784564747150}
   m_Layer: 0
   m_Name: HordeDirector
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114143784564747150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069218242169100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fac5c1045d9840aa9aceba5f596f327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114209276656794448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,10 +74,10 @@ MonoBehaviour:
       spanwFrequency: 1
       spawnFor: 10
     - whatToSpawn:
-      - {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508, type: 2}
+      - {fileID: 1741175997469908, guid: ae97eca61ad004ab49f765aec3bf8d8f, type: 2}
       spawnDistance: 10
-      spanwFrequency: 1
-      spawnFor: 5
+      spanwFrequency: 2
+      spawnFor: 10
     - whatToSpawn:
       - {fileID: 1228160630225258, guid: a3aa790ae117f4bbd8d0857287c9eb43, type: 2}
       spawnDistance: 10
@@ -76,6 +88,21 @@ MonoBehaviour:
       spawnDistance: 10
       spanwFrequency: 1
       spawnFor: 1
+    - whatToSpawn:
+      - {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508, type: 2}
+      spawnDistance: 10
+      spanwFrequency: 0.5
+      spawnFor: 10
+    - whatToSpawn:
+      - {fileID: 1228160630225258, guid: a3aa790ae117f4bbd8d0857287c9eb43, type: 2}
+      spawnDistance: 10
+      spanwFrequency: 1
+      spawnFor: 5
+    - whatToSpawn:
+      - {fileID: 1228160630225258, guid: 7fd1c46e6b46a4fd6a0660bd9a361508, type: 2}
+      spawnDistance: 10
+      spanwFrequency: 1
+      spawnFor: 10
 --- !u!114 &114628306343892380
 MonoBehaviour:
   m_ObjectHideFlags: 1
