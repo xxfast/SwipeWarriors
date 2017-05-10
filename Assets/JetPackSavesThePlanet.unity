@@ -2292,6 +2292,10 @@ Prefab:
       propertyPath: LossText
       value: 
       objectReference: {fileID: 875048957}
+    - target: {fileID: 1470615805369906, guid: f7d34094866dd431ab7443bc05539539, type: 2}
+      propertyPath: m_TagString
+      value: player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7d34094866dd431ab7443bc05539539, type: 2}
   m_IsPrefabParent: 0

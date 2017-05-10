@@ -166,6 +166,10 @@ Prefab:
       propertyPath: LossText
       value: 
       objectReference: {fileID: 1604543045}
+    - target: {fileID: 1027982187850378, guid: 4c890703e2be9d74491eaf4e4617bff9, type: 2}
+      propertyPath: m_TagString
+      value: player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c890703e2be9d74491eaf4e4617bff9, type: 2}
   m_IsPrefabParent: 0
@@ -1241,6 +1245,29 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1888862278 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1069218242169100, guid: 6f4bfec162a3c487cbeb7b52db262e38,
+    type: 2}
+  m_PrefabInternal: {fileID: 1991667182}
+--- !u!114 &1888862279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888862278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23c8be6832ac430db521add3eb13cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  spawnDistance: 10
+  spanwFrequency: 1
+  spawnFor: 10
+  whatToSpawn:
+  - {fileID: 1228160630225258, guid: 908c91f19f3914a6e994c6aaa2b5947e, type: 2}
+  target: {fileID: 1926679845}
 --- !u!1 &1926679845 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1027982187850378, guid: 4c890703e2be9d74491eaf4e4617bff9,

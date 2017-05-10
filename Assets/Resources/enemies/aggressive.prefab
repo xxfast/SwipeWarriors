@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 60202819756168348}
   - component: {fileID: 114846078258886858}
   - component: {fileID: 50747411368309174}
+  - component: {fileID: 114526055853409856}
+  - component: {fileID: 114083411064512928}
   m_Layer: 8
   m_Name: aggressive
   m_TagString: enemy
@@ -96,6 +98,21 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -0.099999994}
       - {x: 0.099999994, y: -0.06}
       - {x: 0.02, y: 0.099999994}
+--- !u!114 &114083411064512928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b574932361344129cf11cd23230dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 1
+  attackFrequency: 0.1
+  attackAnyoneFlagged: player
+  isAllowed: 0
 --- !u!114 &114122047896101154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,7 +144,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
-  alive: 0
+--- !u!114 &114526055853409856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2132ba2ac5a54c67a02ce847864d0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumScale: 0.5
 --- !u!114 &114846078258886858
 MonoBehaviour:
   m_ObjectHideFlags: 1
