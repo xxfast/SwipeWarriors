@@ -11,7 +11,8 @@ public class DealDamageOnImpact : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision){
 		if(collision.gameObject.tag==damageObjectsTagged){
 			collision.gameObject.GetComponent<Health> ().DealDamage (damage);
-            GameObject.Find("ScoreKeeper").SendMessage("Add", DamageScore);
+            try { GameObject.Find("ScoreKeeper").SendMessage("Add", DamageScore);} catch { } //Add Score or do nothing
+            Destroy(this.gameObject);
         }
 	}
 }

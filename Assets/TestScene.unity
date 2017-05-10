@@ -728,6 +728,11 @@ Prefab:
       propertyPath: DamageScore
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114784925065162576, guid: f7d34094866dd431ab7443bc05539539,
+        type: 2}
+      propertyPath: debugIndicators
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7d34094866dd431ab7443bc05539539, type: 2}
   m_IsPrefabParent: 0
@@ -1124,53 +1129,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2052377560
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.27331543
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.88409424
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620512682551168, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114076402830456904, guid: c28610cc24279fa478880a728cf4e3fc,
-        type: 2}
-      propertyPath: ScorePrefix
-      value: 'Score:'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c28610cc24279fa478880a728cf4e3fc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2133456682
 GameObject:
   m_ObjectHideFlags: 0

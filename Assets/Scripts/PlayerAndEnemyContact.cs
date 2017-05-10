@@ -27,7 +27,7 @@ public class PlayerAndEnemyContact : MonoBehaviour {
         {
             Debug.Log("Collided with Pickup");
             theCollider.gameObject.SendMessage("onCollect", this.gameObject);
-            GameObject.Find("ScoreKeeper").SendMessage("Add", CollectionScore);
+            try { GameObject.Find("ScoreKeeper").SendMessage("Add", CollectionScore); } catch { }
         }
     }
 }

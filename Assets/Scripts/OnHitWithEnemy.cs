@@ -18,7 +18,8 @@ public class OnHitWithEnemy : MonoBehaviour {
         {
             theObject.gameObject.GetComponent<Health> ().DealDamage (damageAmount);
             staminaBar.attack();
-            GameObject.Find("ScoreKeeper").SendMessage("Add", DamageScore);
+            try { GameObject.Find("ScoreKeeper").SendMessage("Add", DamageScore); } catch { }
+            Destroy(this.gameObject);
         }
     }
 }
