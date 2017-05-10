@@ -2207,6 +2207,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114784925065162576, guid: f7d34094866dd431ab7443bc05539539,
+        type: 2}
+      propertyPath: minimumStamina
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7d34094866dd431ab7443bc05539539, type: 2}
   m_IsPrefabParent: 0
