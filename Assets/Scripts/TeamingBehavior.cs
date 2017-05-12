@@ -10,7 +10,8 @@ public class TeamingBehavior : DiscoverBehavior {
 	public new void Start(){
 		base.Start ();
 		lookForTag = this.gameObject.tag;
-		preteamingTarget = this.gameObject.GetComponent<FollowTarget> ().target;
+		var target = this.gameObject.GetComponent<FollowTarget> ().target;
+		preteamingTarget = target;
 	}
 
 	public new void Update(){
@@ -25,5 +26,11 @@ public class TeamingBehavior : DiscoverBehavior {
 		{
 			ConfirmTarget(preteamingTarget);
 		}
+	}
+
+	public override void ConfirmTarget (GameObject target)
+	{
+		if(target.GetComponent<TeamingBehavior>())
+			base.ConfirmTarget (target);
 	}
 }

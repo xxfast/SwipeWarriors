@@ -66,8 +66,7 @@ public class DiscoverBehavior : MonoBehaviour {
 				foreach(RaycastHit2D hit in hits){
 					if (hit.collider.gameObject != this.gameObject) {
 						if (hit.collider.gameObject.tag == lookForTag) {
-							interested = hit.collider.gameObject;
-							ConfirmTarget (interested);
+							ConfirmTarget (hit.collider.gameObject);
 						}
 					}
 				}
@@ -75,8 +74,9 @@ public class DiscoverBehavior : MonoBehaviour {
 		}
 	}
 
-	public void ConfirmTarget(GameObject interested){
-		this.gameObject.GetComponent<FollowTarget> ().target = interested;
+	public virtual void ConfirmTarget(GameObject target){
+		this.interested = target;
+		this.gameObject.GetComponent<FollowTarget> ().target = target;
 	}
 
 	public Vector2[] GetCircleDirections(int numDirections)
