@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookForTag: 
-  viewDistance: 20
+  viewDistance: 50
   viewDirectionCount: 360
-  observeFreaquency: 5
+  observeFreaquency: 3
   preteamingTarget: {fileID: 0}
 --- !u!114 &114526055853409856
 MonoBehaviour:
