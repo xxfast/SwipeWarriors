@@ -28,6 +28,7 @@ public class ReproductiveBehavior : MonoBehaviour {
 			Object prefab = toReproduce[index];
 			if (prefab) {
 				GameObject enemy = Instantiate (prefab, this.gameObject.transform.position, this.gameObject.transform.localRotation) as GameObject;
+				Physics2D.IgnoreCollision(enemy.GetComponent<PolygonCollider2D>(), GetComponent<PolygonCollider2D>());
 				enemy.GetComponent<FollowTarget> ().target = targetOfTheReproduced;
 			}
 		}

@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 50747411368309174}
   - component: {fileID: 114526055853409856}
   - component: {fileID: 114083411064512928}
+  - component: {fileID: 114466921944094918}
   m_Layer: 8
   m_Name: aggressive
   m_TagString: enemy
@@ -144,6 +145,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+--- !u!114 &114466921944094918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228160630225258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d610ee74326bc4231b80b7b45922f597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookForTag: 
+  viewDistance: 20
+  viewDirectionCount: 360
+  observeFreaquency: 5
+  preteamingTarget: {fileID: 0}
 --- !u!114 &114526055853409856
 MonoBehaviour:
   m_ObjectHideFlags: 1

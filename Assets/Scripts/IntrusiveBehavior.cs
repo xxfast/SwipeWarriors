@@ -18,9 +18,10 @@ public class IntrusiveBehavior : MonoBehaviour {
 		{
 			this.gameObject.transform.SetParent(theCollider.gameObject.transform);
 			this.enabled = false;
-			this.gameObject.GetComponent<FollowTarget>().enabled = false;
 			this.gameObject.GetComponent<ReproductiveBehavior>().enabled = true;
 			this.gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+			Destroy (this.gameObject.GetComponent<DiscoverBehavior> ());
+			Destroy (this.gameObject.GetComponent<FollowTarget> ());
 			Destroy (this.gameObject.GetComponent<Rigidbody2D> ());
 		}
 	}

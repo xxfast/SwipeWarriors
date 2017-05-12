@@ -6,51 +6,80 @@ using UnityEngine;
 /// This Component helps the Intrusive to discover floating objects 
 /// and the also let its spawned children to discover the player
 /// </summary>
+
+[RequireComponent(typeof(FollowTarget))]
 public class DiscoverBehavior : MonoBehaviour {
 
 	public string lookForTag = "";
 	public float viewDistance = 10;
-	public int viewDirectionCount = 16;
+	public int viewDirectionCount = 360;
 	public int observeFreaquency = 5;
 
 	private GameObject interested;
+	private bool shouldObserve = true;
 
 	private float time;
 
-	void Start () {
-		Observe ();
+	public bool ShouldObserve {
+		get {
+			return shouldObserve;
+		}
+		set {
+			shouldObserve = value;
+		}
+	}
+
+	public GameObject Interested {
+		get {
+			return interested;
+		}
+		set { interested = value; }
+	}
+
+	public float CurrentTime {
+		get {
+			return time;
+		}
+		set {
+			time = value;
+		}
+	}
+
+	public void Start () {
 		time = observeFreaquency;
+		if(shouldObserve) Observe ();
 	}
 	
-	void Update () {
+	public void Update () {
 		time -= Time.deltaTime;
 		if(time<=0){
-			Observe ();
+			if(shouldObserve) Observe ();
 			time = observeFreaquency;
 		}
 	}
 
-	void Observe(){
+	public void Observe(){
 		interested = null;
 		foreach(Vector2 currentDirection in GetCircleDirections(viewDirectionCount)){
 			RaycastHit2D[] hits = Physics2D.RaycastAll(this.gameObject.transform.position,currentDirection,viewDistance);
 			if (hits.Length > 1) {
 				foreach(RaycastHit2D hit in hits){
 					if (hit.collider.gameObject != this.gameObject) {
-						if(hit.collider.gameObject.tag==lookForTag)
+						if (hit.collider.gameObject.tag == lookForTag) {
 							interested = hit.collider.gameObject;
+							ConfirmTarget (interested);
+						}
 					}
 				}
 			}
 		}
-		ConfirmTarget ();
 	}
 
-	void ConfirmTarget(){
+	public void ConfirmTarget(GameObject interested){
 		this.gameObject.GetComponent<FollowTarget> ().target = interested;
 	}
 
-	Vector2[] GetCircleDirections(int numDirections)
+	public Vector2[] GetCircleDirections(int numDirections)
 	{
 		var pts = new Vector2[numDirections];
 		var inc = Mathf.PI * (3 - Mathf.Sqrt(5));

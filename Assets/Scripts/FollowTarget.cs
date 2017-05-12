@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class FollowTarget : MonoBehaviour {
 
 	public GameObject target;
@@ -22,11 +23,9 @@ public class FollowTarget : MonoBehaviour {
 	void ApplyForceTowardTarget(){
 		if(target){
 			var d = Vector2.Distance (this.transform.position,target.transform.position);
-			if (d > target.transform.localScale.x/2){
-				var dx = (target.transform.position.x - this.transform.position.x) / d;
-				var dy = (target.transform.position.y - this.transform.position.y) / d;
-				this.gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2(dx * followSpeed, dy * followSpeed));
-			}
+			var dx = (target.transform.position.x - this.transform.position.x) / d;
+			var dy = (target.transform.position.y - this.transform.position.y) / d;
+			this.gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2(dx * followSpeed, dy * followSpeed));
 			this.gameObject.GetComponent<Rigidbody2D> ().AddTorque (rotationSpeed);
 		}
 	}
