@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114722794980813020}
   - component: {fileID: 50604971021742502}
   - component: {fileID: 114202804064471166}
+  - component: {fileID: 114422055521820646}
   m_Layer: 0
   m_Name: GroupController
   m_TagString: enemy
@@ -74,6 +75,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupMembers: []
+--- !u!114 &114422055521820646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944614568809132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033717716521645ab9e2104dcd72c232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initiater: 0
+  groupController: {fileID: 0}
 --- !u!114 &114722794980813020
 MonoBehaviour:
   m_ObjectHideFlags: 1

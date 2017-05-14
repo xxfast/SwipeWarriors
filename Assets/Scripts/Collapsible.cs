@@ -7,13 +7,6 @@ public class Collapsible : MonoBehaviour {
 	public bool initiater = false;
 	public GameObject groupController;
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -28,6 +21,7 @@ public class Collapsible : MonoBehaviour {
 
 				groupController.GetComponent<GroupController> ().groupMembers.Add (this.gameObject);
 				groupController.GetComponent<GroupController> ().groupMembers.Add (collision.gameObject);
+				groupController.GetComponent<Collapsible> ().groupController = groupController;
 
 				//Make them it's children 
 				collision.gameObject.transform.SetParent (groupController.transform);
