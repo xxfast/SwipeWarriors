@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class HitTimerCooldown : MonoBehaviour {
 
     //This script handles the cooldown for when enemies get hit
@@ -11,7 +12,10 @@ public class HitTimerCooldown : MonoBehaviour {
     private float timeLeft = 0.0f;
     private bool started = false;
 
-	// Update is called once per frame
+	void Start(){
+		healthBar = gameObject.GetComponent<Health> ();
+	}
+
 	void Update () {
 		if (healthBar.isHit)
         {
