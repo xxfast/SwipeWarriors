@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4553108383010108}
   - component: {fileID: 212741300507314036}
-  - component: {fileID: 114890301791961890}
-  - component: {fileID: 60294019361286954}
+  - component: {fileID: 70662720006105612}
   - component: {fileID: 50351102888545254}
+  - component: {fileID: 114890301791961890}
   - component: {fileID: 114526017799456236}
   m_Layer: 0
   m_Name: Gav_Projectile
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60294019361286954
-PolygonCollider2D:
+--- !u!70 &70662720006105612
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -73,19 +73,12 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -0.044999998, y: 0.055}
-      - {x: -0.055, y: 0.044999998}
-      - {x: -0.055, y: -0.044999998}
-      - {x: -0.044999998, y: -0.055}
-      - {x: 0.044999998, y: -0.055}
-      - {x: 0.055, y: -0.044999998}
-      - {x: 0.055, y: 0.044999998}
-      - {x: 0.044999998, y: 0.055}
+  m_Size: {x: 0.13, y: 0.37}
+  m_Direction: 0
 --- !u!114 &114526017799456236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bab22416a4fce428d8f57bfbf8cf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 5
   owner: {fileID: 0}
 --- !u!114 &114890301791961890
 MonoBehaviour:
@@ -141,8 +134,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fdd3b7d1c41afa04689ac0d17f3f8437, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1

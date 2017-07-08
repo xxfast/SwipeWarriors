@@ -16,7 +16,7 @@ public class Damageable : MonoBehaviour {
 
     void Update() {
         if (currentHealth <= 0) {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -25,10 +25,15 @@ public class Damageable : MonoBehaviour {
         currentHealth -= damage;
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
-        Projectile p = collider.GetComponent<Projectile>();
+    void OnCollisionEnter2D(Collision2D collision) {
+        Projectile p = collision.collider.GetComponent<Projectile>();
         if (p) {
             TakeDamage(p.damage);
+            if (currentHealth <= 0) {
+                //Hardcoded contact point 0
+                if (gameObject.GetComponent<Asteroid>()) gameObject.GetComponent<Asteroid>().Split( collision.contacts[0].normal );
+                Destroy(gameObject);
+            }
         }
     }
 }
