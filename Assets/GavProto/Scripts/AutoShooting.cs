@@ -11,7 +11,9 @@ public class AutoShooting : MonoBehaviour {
     public float shootVelocity = 100;
     public float rayWidth;
 
+    
     public GameObject projectilePrefab;
+    public GameObject[] objectsIgnored;
     public GameObject player;
     public GameObject hull;
 
@@ -48,10 +50,11 @@ public class AutoShooting : MonoBehaviour {
         }
         if (target) Shoot(target);
     }
-
+     
     void Shoot(GameObject target) {
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        projectile.GetComponent<Projectile>().owner = player;
+        projectile.GetComponent<Projectile>().SetOwner(player);
+        projectile.GetComponent<Projectile>().IgnoreCollisionsWith(objectsIgnored);
         projectile.transform.right = transform.right;
         projectile.GetComponent<Rigidbody2D>().velocity = shootVelocity * (Vector2)transform.up;
     }

@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114575583189997166}
   - component: {fileID: 114898487127895172}
   - component: {fileID: 114186994166379510}
-  - component: {fileID: 114395949754684758}
   - component: {fileID: 114661589150141298}
   - component: {fileID: 114602527404739468}
   m_Layer: 0
@@ -109,19 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1032eaeb07cae5f468745b838011c614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114395949754684758
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014096181449930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a063b8b00cab5f54f9acba73aeb4295e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 2
-  currentHealth: 0
 --- !u!114 &114575583189997166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,12 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d026fb6f6277dd54cad2073990457a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnProtectionTime: 0.1
+  maxHealth: 1
+  currentHealth: 0
   level: 1
   minExplosionForce: 1000
   maxExplosionForce: 1000
-  level3: {fileID: 1014096181449930, guid: 503affe5c9b8b284893386b7d4319073, type: 2}
-  level2: {fileID: 1014096181449930, guid: 1ff02919cde232242adb66685ad25341, type: 2}
-  level1: {fileID: 1014096181449930}
+  splitDistance: 0
+  maxSpawnAngleDeviationFactor: 0
+  objectToSplitInto: {fileID: 0}
+  minPiecesCount: 0
+  maxPiecesCount: 0
 --- !u!114 &114661589150141298
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114575583189997166}
   - component: {fileID: 114898487127895172}
   - component: {fileID: 114186994166379510}
-  - component: {fileID: 114395949754684758}
   - component: {fileID: 114359234649756562}
   - component: {fileID: 114495838782342498}
   m_Layer: 0
@@ -121,19 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39c89689012de94588c508380eeb117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114395949754684758
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014096181449930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a063b8b00cab5f54f9acba73aeb4295e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 0
 --- !u!114 &114495838782342498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,6 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d026fb6f6277dd54cad2073990457a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnProtectionTime: 0.1
+  maxHealth: 3
+  currentHealth: 0
   level: 3
   minExplosionForce: 3000
   maxExplosionForce: 3000

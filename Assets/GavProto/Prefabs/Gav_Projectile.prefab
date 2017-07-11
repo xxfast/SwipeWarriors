@@ -62,8 +62,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!70 &70662720006105612
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -90,8 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bab22416a4fce428d8f57bfbf8cf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  owner: {fileID: 0}
+  damage: 2
+  colliders:
+  - {fileID: 70662720006105612}
 --- !u!114 &114890301791961890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +136,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fdd3b7d1c41afa04689ac0d17f3f8437, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
