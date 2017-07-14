@@ -134,6 +134,7 @@ MonoBehaviour:
   spawnProtectionTime: 0.1
   maxHealth: 3
   currentHealth: 0
+  healthBar: {fileID: 0}
   level: 3
   minExplosionForce: 3000
   maxExplosionForce: 3000

@@ -406,6 +406,21 @@ Prefab:
       propertyPath: generateAround
       value: 
       objectReference: {fileID: 1703631807}
+    - target: {fileID: 114584018380574338, guid: 59e002eb417224a40bb8d22ff8020fd5,
+        type: 2}
+      propertyPath: maxObstacleCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114584018380574338, guid: 59e002eb417224a40bb8d22ff8020fd5,
+        type: 2}
+      propertyPath: spawnRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114584018380574338, guid: 59e002eb417224a40bb8d22ff8020fd5,
+        type: 2}
+      propertyPath: despawnRange
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59e002eb417224a40bb8d22ff8020fd5, type: 2}
   m_IsPrefabParent: 0
