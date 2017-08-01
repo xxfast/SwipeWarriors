@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/EnemyTestScene.unity
     guid: 691e08a6532064b3b8e8b18e6cf22307
+  - enabled: 1
+    path: Assets/GridMovement.unity
+    guid: 8efea8a29443c48dea751c8981baf874
