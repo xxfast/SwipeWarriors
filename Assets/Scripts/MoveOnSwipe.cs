@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveOnSwipe : MonoBehaviour {
 	
 	public float speed = 100;
+	public bool changeDirection = false;
 	private Vector2 originalScale;
 
 	// Use this for initialization
@@ -17,10 +18,12 @@ public class MoveOnSwipe : MonoBehaviour {
 	void Update () {
 		if( Input.touchCount > 0 && Input.GetTouch(0).phase==TouchPhase.Moved){
 			Vector2 touchDirection = Input.GetTouch (0).deltaPosition.normalized;
-			Vector2 scale = originalScale;
+			if (changeDirection) {
+				Vector2 scale = originalScale;
 			if (touchDirection.x < 0)
 				scale.x *= -1;
-			this.transform.localScale = scale;
+				this.transform.localScale = scale;
+			}
 			touchDirection.Scale (new Vector2 (speed, speed));
 			this.gameObject.GetComponent<Rigidbody2D> ().AddForce (touchDirection);
 		}
