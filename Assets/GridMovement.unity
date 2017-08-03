@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 320355368}
   - component: {fileID: 320355367}
   - component: {fileID: 320355366}
+  - component: {fileID: 320355370}
   m_Layer: 0
   m_Name: sword-2
   m_TagString: Untagged
@@ -298,6 +299,20 @@ SpriteRenderer:
   m_Size: {x: 0.95, y: 3.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+--- !u!114 &320355370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320355364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2e941446c6e4f06911cfca9d2c773a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackStrength: 10000
+  attackTime: 0.5
+  noOfTapsforAttack: 2
 --- !u!1 &524101024
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +493,7 @@ GameObject:
   - component: {fileID: 1249601836}
   - component: {fileID: 1249601835}
   - component: {fileID: 1249601834}
+  - component: {fileID: 1249601838}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -617,6 +633,18 @@ SpriteRenderer:
   m_Size: {x: 0.73, y: 0.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+--- !u!114 &1249601838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1249601832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c5b28db7fcc4b669d5ab414c06a7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeze: 1
 --- !u!1 &1438611158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1202,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1686213018
+  randomSeed: 499924445
   InitialModule:
     serializedVersion: 3
     enabled: 1
