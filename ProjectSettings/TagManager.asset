@@ -21,9 +21,9 @@ TagManager:
   - enemies
   - center
   - obstacle
-  - 
-  - 
-  - 
+  - camera
+  - player
+  - sword
   - 
   - 
   - 
